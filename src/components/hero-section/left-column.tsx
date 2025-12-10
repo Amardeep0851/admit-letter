@@ -1,0 +1,60 @@
+import { CheckCircle, Play } from "lucide-react"
+import React from 'react'
+import { Button } from "@/components/ui/button"
+
+function LeftColumn() {
+  return (
+    <div className="text-white space-y-8 pt-10 lg:pt-0 col-span-3">
+            <h1 className="text-5xl lg:text-7xl font-bold leading-tight tracking-tight">
+              Get a verified offer letter for just ₹1
+            </h1>
+
+            <ul className="text-zinc-300 text-lg  ">
+              {[
+                "Official, fully-formatted offer letter from top colleges.",
+                "Fast processing — delivered directly to your email.",
+              ].map((item, index) => (
+                <li className="flex gap-2 items-center mt-1 " key={index}>
+                  <CheckCircle className="size-4 text-red-600 " /> {item}
+                </li>
+              ))}
+            </ul>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-6 items-center pt-2">
+              <Button className="" variant="red" size="lg">
+                <span className="text-lg">Apply Now</span>
+              </Button>
+
+              <button className="group flex items-center gap-3 text-white font-medium hover:text-red-700 cursor-pointer transition-colors">
+                <div className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center group-hover:border-red-600 transition-all duration-200">
+                  <Play className="w-4 h-4 fill-current" />
+                </div>
+                <span>How it works</span>
+              </button>
+            </div>
+
+            {/* Stats Section */}
+            <div className="pt-12 flex gap-12 border-t border-white/10 mt-12">
+              {
+                  [
+                    {title:"5,000+", content:"Letter issued"},
+                    {title:"100%", content:"Approval Rate"},
+                    {title:"280+", content:"Courses"},
+                  ].map((item, index) => (
+                    <div  className="" key={index}>
+                      <h3 className="text-3xl font-bold text-white border-b-4 border-red-600 pb-1 pr-3">
+                        {item.title}
+                      </h3>
+                      <p className="text-md text-zinc-300 mt-1">
+                        {item.content}
+                      </p>
+                    </div>
+                  ))
+                }
+            </div>
+          </div>
+  )
+}
+
+export default LeftColumn
