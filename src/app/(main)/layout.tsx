@@ -6,11 +6,11 @@ function layout({children}:{children:React.ReactNode}) {
     <div>
       <div className="bg-black">
         <Header />
+      </div>
       <div className="pt-0">
         { children }
       </div>
       </div>
-    </div>
   )
 }
 

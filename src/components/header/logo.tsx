@@ -10,8 +10,8 @@ function Logo() {
       </div>
       
       <motion.img 
-      src="/images/degree-cap.png" className="w-7 h-7 absolute left-[189px] z-50"
-      animate={{rotate:[0, 30, 0,  0, -30,0, 0], y:[1, 5, 3, 3, 5,3, 0], x:[2,2, 0, -90,-90,-90, 0]}}
+      src="/images/degree-cap.png" className="w-7 h-7 absolute left-[191px] z-50"
+      animate={{rotate:[0, 30, 0,  0, -30,0, 0], y:[2, 8, 3, 3, 8,3, 3], x:[2,2, 0, -94,-94,-94, 0]}}
       transition={{duration:10, repeat:Infinity, times:[0, 0.3, 0.5, 0.6, 0.9]}}
        />
 
