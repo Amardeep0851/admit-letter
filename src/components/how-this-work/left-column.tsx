@@ -1,12 +1,13 @@
 "use client"
 import React from 'react';
-import {motion} from "framer-motion"
+import {easeInOut, motion} from "framer-motion"
 import Image from "next/image";
 
 function LeftCoumn() {
   return (
     <motion.div
           className="relative w-full flex justify-center md:justify-start items-center col-span-2 md:pr-6 order-2 md:order-1"
+
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -20,9 +21,9 @@ function LeftCoumn() {
           {/* Woman Image */}
           <div className="md:w-[400px] aspect-square z-20 w-full overflow-hidden rounded-md">
             <motion.div className="relative w-full h-full "
-          whileHover={{scale:1.1}}
-          transition={{duration:10}}
-          >
+              whileHover={{scale:1.1}}
+              transition={{duration:0.1, ease:easeInOut}}
+            >
             <Image
               src="/images/how-this-work3.jpg" // Replace with actual image path
               alt="Smiling woman holding a notebook"

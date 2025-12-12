@@ -21,7 +21,7 @@ function LeftColumn() {
             <ul className="text-zinc-300 text-lg  ">
               {[
                 "Official, fully-formatted offer letter from top colleges.",
-                "Fast processing — delivered directly to your email.",
+                "No hidden charges for starting.",
               ].map((item, index) => (
                 <motion.li className="flex gap-2 items-center mt-1 " key={index}
                 initial={{x:-40, opacity:0}}
@@ -40,7 +40,7 @@ function LeftColumn() {
                 transition={{duration:0.5, delay:0.6}}
             >
               <Button className="" variant="red" size="lg">
-                <span className="text-lg">Apply Now</span>
+                <span className="text-lg"> Start for ₹1 </span>
               </Button>
 
               <button className="group flex items-center gap-3 text-white font-medium hover:text-red-700 cursor-pointer transition-colors">

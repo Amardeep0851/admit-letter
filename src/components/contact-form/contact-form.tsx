@@ -10,7 +10,7 @@ import { AtSign, Mail, MessageSquare, Phone, PhoneCallIcon, PhoneIncoming, Phone
 
 function ContactForm() {
   return (
-    <div className="grid grid-cols-1 max-w-7xl mx-auto relative px-4 xl:px-0 lg:grid-cols-2 gap-4 py-12 lg:py-24 pr-4 overflow-hidden">
+    <div className="grid grid-cols-1 max-w-7xl mx-auto relative px-4 xl:px-0 lg:grid-cols-5 gap-4 py-12 lg:py-24 pr-4 overflow-hidden">
         
         {/* LEFT — Text Section */}
         {/* <Image 
@@ -21,7 +21,7 @@ function ContactForm() {
             objectPosition="center" 
             className="opacity-5" 
           /> */}
-        <div className="flex flex-col  justify-center px-4 relative ">
+        <div className="flex flex-col  justify-center px-4 relative col-span-3 ">
           <motion.h2 
             className="text-4xl font-semibold text-orange-700 mb-4 leading-tight text-justify"
             initial={{opacity:0, y:-20}}
@@ -43,7 +43,7 @@ function ContactForm() {
 
         {/* RIGHT — Form*/}
         <motion.form 
-        className="dark:bg-zinc-900/50 bg-zinc-200/50  z-10 border dark:border-zinc-700 border-zinc-300  p-8 rounded-sm shadow-2xl mr-4"
+        className="dark:bg-zinc-900/50 bg-zinc-200/50 col-span-2  z-10 border dark:border-zinc-500 border-zinc-200  p-8 rounded-sm shadow-2xl mr-4"
         initial={{opacity:0, y:-20}}
         whileInView={{opacity:1, y:0}}
         transition={{duration:0.5}}
