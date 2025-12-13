@@ -1,14 +1,18 @@
 import React from "react";
 import Image from "next/image";
-import Footer from "@/components/footer/footer";
-import { FaqSection } from "@/components/faq/faq";
 import TestimonialSection from "@/components/testimonial-section/testimonial-section";
-import HeroSection2 from "@/components/hero-section/hero-section2";
 import HowThisWork from "@/components/how-this-work/how-this-work";
 import ContactForm from "@/components/contact-form/contact-form";
 import WhatsappButton from "@/components/whatsapp/whatsapp-button";
-import UniversitySection from "@/components/Universities/universities";
-import CountriesSection from "@/components/countries/countries";
+import FaqSection from "@/components/faq/faq";
+import HeroSection2 from "@/components/hero-section/hero-section2";
+import UniversitySection2 from "@/components/Universities/universities2";
+import FaqSection2 from "@/components/faq/faq2";
+import Footer from "@/components/footer/footer";
+import Footer2 from "@/components/footer/footer2";
+import Test from "@/components/test/test";
+import Test2 from "@/components/test/test2";
+import CountriesSection3 from "@/components/countries/country3";
 
 function page() {
   return (
@@ -18,14 +22,11 @@ function page() {
           <HeroSection2 />
         </div>
       <div className=" bg-white">
-        <UniversitySection />
+        <UniversitySection2 />
       </div>
       </div>
       <div className="bg-zinc-100 ">
-        <CountriesSection />
-      </div>
-      <div className="bg-zinc-50">
-        <HowThisWork />
+        <CountriesSection3 />
       </div>
       <div className="relative">
         <Image
@@ -34,9 +35,12 @@ function page() {
           alt="Agent"
           objectFit="cover"
           objectPosition="center"
-          className="opacity-5"
+          className="opacity-15"
         />
         <ContactForm />
+      </div>
+      <div className="bg-zinc-50">
+        <HowThisWork />
       </div>
       <div className="w-full ">
         <div className="max-w-7xl mx-auto relative px-4 xl:px-0 ">
@@ -45,12 +49,16 @@ function page() {
 
         <div className="bg-[#fafafc]">
           <FaqSection />
-        </div>
-        <div>
-          <Footer />
+          <FaqSection2 />
         </div>
         <div>
           <WhatsappButton />
+          <Test />
+          <Test2 />
+        </div>
+        <div>
+          <Footer2 />
+          <Footer />
         </div>
       </div>
     </>

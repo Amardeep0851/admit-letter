@@ -42,7 +42,7 @@ const faqData = [
   },
 ];
 
-export function FaqSection() {
+export default function FaqSection() {
   return (
     <section className="py-16 px-4 grid grid-cols-7 max-w-7xl mx-auto relative xl:px-0 "> 
     <div className="mx-auto space-y-8 col-span-4">

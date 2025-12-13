@@ -68,20 +68,20 @@ const TESTIMONIALS = [
     <div className="lg:col-span-6 relative">
             
             {/* The White Card */}
-            <div className="bg-white rounded-md  shadow-xl relative z-10 min-h-[300px] flex flex-col md:flex-row border border-zinc-100">
+            <div className="bg-white rounded-md  shadow-lg relative z-10 min-h-[300px] flex flex-col md:flex-row border border-zinc-200">
               
               {/* Navigation Buttons (Floating on the edges) */}
               <Button 
                 onClick={prevSlide}
                 variant="red"
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 cursor-pointer "
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 cursor-pointer shadow-sm hover:shadow-red-600 shadow-zinc-900"
               >
                 <ChevronLeft className="w-6 h-6 text-zinc-200 group-hover:text-zinc-50" />
               </Button>
 
               <Button 
                 onClick={nextSlide}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-50"
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-50 shadow-sm hover:shadow-red-600 shadow-zinc-900"
                 variant="red"
 
               >
@@ -101,20 +101,8 @@ const TESTIMONIALS = [
                 >
                     {/* Content Side */}
                     <div className="w-full md:w-3/5 p-4 lg:px-8 py-4 flex flex-col justify-center ">
-                        {/* Stars */}
-                        
-
-                        {/* Quote */}
                         <blockquote className="text-gray-600 leading-relaxed mb-8 text-lg text-justify">
                             "{TESTIMONIALS[currentIndex].text}"
-                            {/* <div className="flex gap-1 mt-3 justify-self-end">
-                            {[...Array(5)].map((_, i) => (
-                                <Star 
-                                    key={i} 
-                                    className={`w-5 h-5 ${i < TESTIMONIALS[currentIndex].rating ? "fill-orange-400 text-orange-400" : "fill-gray-200 text-gray-200"}`} 
-                                />
-                            ))}
-                        </div> */}
                         </blockquote>
 
                         {/* Author Info */}

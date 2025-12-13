@@ -8,7 +8,7 @@ import RightTestimonial from "./right-testimonial";
 function TestimonialSection(){
   return (
     <section className=" py-24 overflow-hidden relative">
-      <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8">
         <LeftTestimonial />
         <RightTestimonial />
     </div>

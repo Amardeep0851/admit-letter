@@ -39,16 +39,11 @@ function LeftColumn() {
                 animate={{x:0,   opacity:1}}
                 transition={{duration:0.5, delay:0.6}}
             >
-              <Button className="" variant="red" size="lg">
+              <Button className="md:w-64 w-full" variant="red" size="lg">
                 <span className="text-lg"> Start for ₹1 </span>
               </Button>
 
-              <button className="group flex items-center gap-3 text-white font-medium hover:text-red-700 cursor-pointer transition-colors">
-                <div className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center group-hover:border-red-600 transition-all duration-200">
-                  <Play className="w-4 h-4 fill-current" />
-                </div>
-                <span>How it works</span>
-              </button>
+             
             </motion.div>
 
             {/* Stats Section */}
