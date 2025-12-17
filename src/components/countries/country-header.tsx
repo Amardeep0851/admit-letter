@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Flag from "react-world-flags"
 
 type CountryHeaderProps = {
@@ -11,7 +10,7 @@ function CountryHeader({country, flag}:CountryHeaderProps) {
   return (
     <div className="flex gap-4">
       <div className="relative">
-        <Flag code={flag} className="w-[60px] h-[66px] border-2 border-zinc-200 rounded-lg shadow-sm object-cover" />
+        <Flag code={flag} className="w-[90px] h-[70px] border-2 border-zinc-200 rounded-lg shadow-sm object-cover" />
       </div>
       <div>
         <h3 className="text-2xl font-bold text-zinc-800 leading-10">

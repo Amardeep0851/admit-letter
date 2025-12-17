@@ -1,6 +1,6 @@
 import React from 'react'
+
 import Logo from "./logo"
-import Navbar from "./navbar"
 import Phone from "./phone"
 
 function Header() {

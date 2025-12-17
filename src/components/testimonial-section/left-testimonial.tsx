@@ -1,10 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { MessageCircle } from "lucide-react";
 
 function LeftTestimonial() {
   return (
-    <div className="lg:col-span-6 lg:pr-4 ">
+    <div className="lg:col-span-5 lg:pr-4 ">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -21,12 +20,12 @@ function LeftTestimonial() {
           <div className="pl-2">Students Feedback</div>
         </div>
 
-        <h2 className="text-3xl lg:text-5xl font-bold  leading-tight mb-6">
+        <h2 className="text-3xl lg:text-5xl font-bold  leading-tight mb-5">
           Trusted by students <br />
           <span className="text-red-700">across India.</span>
         </h2>
 
-        <p className="text-zinc-600 leading-relaxed mb-6 text-justify">
+        <p className="text-zinc-600 leading-relaxed mb-6 text-justify text-lg">
           Every month, hundreds of students receive their admit letters through
           our platform — fast, simple, and fully verified.
         </p>

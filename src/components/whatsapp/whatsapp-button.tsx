@@ -18,7 +18,7 @@ export default function WhatsappBubble() {
 
   // Animation behavior controller
   useEffect(() => {
-    let timer;
+    let timer: ReturnType<typeof setTimeout>;
 
     const cycle = () => {
       setShowBubble(true);
@@ -40,7 +40,7 @@ export default function WhatsappBubble() {
     }
 
     return () => clearTimeout(timer);
-  }, [cycleCount]);
+  }, [cycleCount, messages.length]);
 
   const phone = "91XXXXXXXXXX";
 

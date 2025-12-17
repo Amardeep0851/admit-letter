@@ -1,6 +1,7 @@
-import { CheckCircle } from "lucide-react";
 import React from "react";
-import { Button } from "../ui/button";
+import { CheckCircle } from "lucide-react";
+
+import CustomButton from "@/components/ui/custom-button";
 
 type RightTabProps = {
   country:string
@@ -14,7 +15,7 @@ function RightTab({country}:RightTabProps) {
     "Review SOP & LORs"
   ]
   return (
-    <div className="col-span-3 bg-red-100 rounded-md lg:ml-8 p-8 ">
+    <div className="lg:col-span-3 bg-red-100 rounded-md lg:ml-8 p-8 ">
       <div className="rounded-md bg-white text-sm px-4 py-1 text-red-700 font-semibold flex gap-2 items-center w-36 shadow-md border-zinc-200">
           <div className="relative flex items-center" >
             <div className="size-2 bg-red-700 animate-ping rounded-full absolute" />
@@ -30,10 +31,8 @@ function RightTab({country}:RightTabProps) {
         ))
         }
       </ul>
-      <Button className="w-full py-6 text-lg" variant="red">
-        Start for just ₹1
-      </Button>
-      <div className="text-sm text-center pt-2 text-zinc-500">
+      <CustomButton title="Start for just ₹1" />
+      <div className="text-sm text-left pt-2 text-zinc-500">
         Offer valid for first consultation.
       </div>
     </div>

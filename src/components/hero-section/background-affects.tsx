@@ -10,7 +10,7 @@ function BackgroundAffects() {
       {/* Lime accent circle segment on the far right */}
       <motion.div 
       animate={{x:[0, 100, 100, 200, 100,  0], y:[0, 100, 200, 200, 100,  0]}}
-      transition={{duration:8, repeat:Infinity}}
+      transition={{duration:12, repeat:Infinity}}
       className="absolute top-0 border-8 left-0 w-[500px] h-[500px] bg-red-700 rounded-full opacity-20 blur-2xl pointer-events-none" />
       {/* <HeroSection /> */}
     </div>

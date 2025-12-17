@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import {AnimatePresence, easeInOut, motion} from "framer-motion"
-import { Calendar, Wallet, Clock, Languages, ArrowRight } from 'lucide-react';
+import { Calendar, Wallet, Clock, Languages} from 'lucide-react';
 
 
 import { 
@@ -45,18 +45,6 @@ const COUNTRIES = [
     button: 'bg-red-700 hover:bg-red-800'
   },
   {
-    id: 'canada',
-    name: 'Canada',
-    flag: 'CA',
-    intake: 'Sep / Jan / May',
-    expenses: '₹12L - ₹25L',
-    deadline: '6-9 Months prior',
-    exams: 'IELTS / TOEFL',
-    color: 'bg-red-50',
-    accent: 'text-red-600',
-    button: 'bg-red-600 hover:bg-red-700'
-  },
-  {
     id: 'australia',
     name: 'Australia',
     flag: 'AU',
@@ -83,10 +71,10 @@ const COUNTRIES = [
 ];
 
   return (
-    <section className="max-w-7xl m-auto px-4 xl:px-0 py-24 font-sans">
-      <header className="flex justify-center flex-col items-center space-y-4 pb-20">
-        <h2 className="text-4xl font-bold text-zinc-800 ">Where do you want to study?</h2>
-        <p className="text-zinc-500">Choose your dream destination to see intake dates, estimated costs, and requirements.</p>
+    <section className="max-w-7xl m-auto px-4 xl:px-0 py-20 font-sans">
+      <header className="flex justify-center flex-col items-center space-y-4 pb-8">
+        <h2 className="text-4xl font-bold text-zinc-800 text-center ">Where do you want to study?</h2>
+        <p className="text-zinc-500 text-center">Choose your dream destination to see intake dates, estimated costs, and requirements.</p>
       </header>
 
       <Tabs defaultValue={COUNTRIES[0].name} className="w-full ">
@@ -101,12 +89,12 @@ const COUNTRIES = [
         ))
       }
         </TabsList> */}
-        <TabsList className="flex justify-center gap-8 self-center">
+        <TabsList className="grid grid-cols-2 gap-4 justify-center self-center h-32 md:grid-cols-4 md:h-16">
       
       {
         COUNTRIES.map((country, index) => ( 
-          <TabsTrigger key={index} value={country.name} className=" px-8 py-4 cursor-pointer bg-white shadow-md  data-[state=active]:bg-red-700 data-[state=active]:text-white font-bold text-base hover:border-red-700 transition-all duration-200">
-            {country.name}
+          <TabsTrigger key={index} value={country.name} className=" px-6 py-2 cursor-pointer bg-white shadow-md  data-[state=active]:bg-red-700 data-[state=active]:text-white font-bold text-base hover:border-red-700 transition-all duration-200 h-12 min-w-32">
+           <Flag code={country.flag} className="size-6 border-2 border-zinc-200 rounded-full shadow-sm object-cover" />  {country.name}
           </TabsTrigger>
         ))
       }
@@ -127,7 +115,7 @@ const COUNTRIES = [
                   transition={{duration:0.3, ease:easeInOut}}
                 >
                   <div className="grid lg:grid-cols-9 ">
-                    <div className="col-span-6">
+                    <div className="lg:col-span-6 w-full">
 
                       <CountryHeader country={country.name} flag={country.flag} />
 
@@ -165,7 +153,7 @@ const COUNTRIES = [
             </TabsContent>
         ))
       }
-    </Tabs>
+      </Tabs>
     </section>
   )
 }

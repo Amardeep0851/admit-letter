@@ -1,8 +1,7 @@
 "use client";
 import React from 'react'
-import Image from "next/image"
 import {motion} from "framer-motion";
-import { AtSign, CheckCircle, Mail,  Phone, Send, SendHorizonal, User } from "lucide-react";
+import { AtSign, CheckCircle, Mail,  Phone, SendHorizonal, User } from "lucide-react";
 
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -15,7 +14,7 @@ function ContactForm() {
     "Secure & Confidential",
   ]
   return (
-    <div className="grid grid-cols-1 max-w-7xl mx-auto relative px-4 xl:px-0 lg:grid-cols-6 gap-8 py-12 lg:py-24 pr-4 overflow-hidden font-sans">
+    <div className="grid grid-cols-1 max-w-7xl mx-auto relative px-4 xl:px-0 lg:grid-cols-6 gap-8 py-20 pr-4 overflow-hidden font-sans">
         
         {/* LEFT — Text Section */}
         

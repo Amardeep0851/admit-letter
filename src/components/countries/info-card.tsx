@@ -8,7 +8,7 @@ type InfoCardProps = {
 // Sub-component for clean code
 export default function InfoCard({ icon, label, value, bg }:InfoCardProps) {
   return (
-  <div className="flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:border-slate-200 transition-colors bg-white">
+  <div className="flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:border-slate-200 transition-colors bg-white mb-4 sm:mb-0">
     <div className={`p-2.5 rounded-lg ${bg}`}>
       {icon}
     </div>

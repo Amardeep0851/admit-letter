@@ -25,7 +25,7 @@ const UniversitySection2 = () => {
           Trusted by Top Universities
         </h2>
         <p className="text-slate-500 mt-2">
-          Our students have received admits from the world's most prestigious institutions.
+          Our students have received admits from the world&apos;s most prestigious institutions.
         </p>
       </div>
       

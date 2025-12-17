@@ -1,8 +1,9 @@
 "use client"
 import React from 'react';
-import { CheckCircle, Play } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import {motion} from "framer-motion";
-import { Button } from "@/components/ui/button";
+
+import CustomButton from "@/components/ui/custom-button";
 
 
 
@@ -39,9 +40,7 @@ function LeftColumn() {
                 animate={{x:0,   opacity:1}}
                 transition={{duration:0.5, delay:0.6}}
             >
-              <Button className="md:w-64 w-full" variant="red" size="lg">
-                <span className="text-lg"> Start for ₹1 </span>
-              </Button>
+              <CustomButton title="Start for just ₹1" />
 
              
             </motion.div>
