@@ -4,13 +4,14 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button"; // Assuming your import path
 import { ArrowRight } from "lucide-react";
 
-export default function CustomButton({ title }:{title:string}) {
+export default function CustomButton({ title, onClick }:{title:string, onClick?:() => void}) {
   const [isHovered, setHovered] = useState(false);
 
   return (
     <Button
       variant="red"
       size="xlg"
+      onClick={onClick}
       className="relative overflow-hidden cursor-pointer group z-50"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -48,13 +49,14 @@ export default function CustomButton({ title }:{title:string}) {
   );
 }
 
-export function CustomButtonOutlineBlack({ title }:{title:string}) {
+export function CustomButtonOutlineBlack({ title, onClick }:{title:string, onClick?:() => void}) {
   const [isHovered, setHovered] = useState(false);
 
   return (
     <Button
       variant="outline"
       size="xlg"
+      onClick={onClick}
       className="relative overflow-hidden cursor-pointer group bg-transparent hover:bg-transparent text-white hover:text-white"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}

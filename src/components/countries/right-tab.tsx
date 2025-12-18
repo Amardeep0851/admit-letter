@@ -1,6 +1,7 @@
 import React from "react";
 import { CheckCircle } from "lucide-react";
 
+import { customScrollTo } from "@/lib/scroll-to";
 import CustomButton from "@/components/ui/custom-button";
 
 type RightTabProps = {
@@ -31,7 +32,7 @@ function RightTab({country}:RightTabProps) {
         ))
         }
       </ul>
-      <CustomButton title="Start for just ₹1" />
+      <CustomButton title="Start for just ₹1" onClick={() =>customScrollTo("ContactForm")} />
       <div className="text-sm text-left pt-2 text-zinc-500">
         Offer valid for first consultation.
       </div>

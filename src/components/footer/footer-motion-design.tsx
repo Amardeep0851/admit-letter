@@ -8,13 +8,13 @@ function FooterMotionDesign() {
     <>
       <div className="absolute md:top-60 lg:left-20 -left-10 top-[400px] -z-10 ">
         <motion.div
-          className="size-40 md:size-96 rounded-full bg-zinc-200 absolute opacity-30 blur-2xl"
-          animate={{ scale: [1, 1.5, 1] }}
+          className="size-40 md:size-96 rounded-full bg-red-900 absolute opacity-30 blur-2xl"
+          animate={{ scale: [1, 1.8, 1] }}
           transition={{ duration: 10, repeat: Infinity }}
         />
         <motion.div
-          className="md:size-40 size-20 rounded-full bg-zinc-100 absolute top-0 left-0 -z-10 opacity-20 "
-          animate={{ opacity: [0.2, 0.4, 0.2] }}
+          className="md:size-32 size-20 rounded-full bg-red-900 absolute top-0 left-0 -z-10 opacity-20 "
+          animate={{ opacity: [0.4, 0.6, 0.4] }}
           transition={{ duration: 10, repeat: Infinity }}
         />
       </div>
@@ -61,7 +61,7 @@ function FooterMotionDesign() {
           times: [0, 0.4, 0.5, 0.9, 1],
           delay: 20,
         }}
-        className="absolute bottom-[210px] scale-75 left-0 w-[150px] h-[55] mx-auto -z-50"
+        className="absolute bottom-[210px] left-0 w-[110px] h-[40px] mx-auto -z-50"
       >
         <Image
           src="/images/aeroplane3.png"

@@ -3,15 +3,17 @@ import React from 'react';
 import { CheckCircle } from "lucide-react";
 import {motion} from "framer-motion";
 
-import CustomButton from "@/components/ui/custom-button";
+import CustomButton, { CustomButtonOutlineBlack } from "@/components/ui/custom-button";
+import Phone from "@/components/header/phone";
+import { customScrollTo } from "@/lib/scroll-to";
 
 
 
 function LeftColumn() {
   return (
-    <div className="text-white space-y-8 pt-10 lg:pt-0 col-span-3">
+    <div className="text-white space-y-8 pt-10 lg:pt-0 col-span-3 ">
             <motion.h1 
-            className="text-5xl lg:text-7xl font-bold leading-tight tracking-tight"
+            className="text-4xl lg:text-7xl min-[359px]:text-5xl font-bold leading-tight tracking-tight text-center lg:text-left"
             initial={{x:-40, skewY:10, opacity:0}}
             animate={{x:0, skewY:0,  opacity:1}}
             transition={{duration:0.5}}
@@ -19,49 +21,50 @@ function LeftColumn() {
               Get a verified offer letter for just ₹1
             </motion.h1>
 
-            <ul className="text-zinc-300 text-lg  ">
+            <ul className="text-zinc-300 text-base lg:text-lg flex lg:justify-start flex-col items-center lg:items-start  ">
               {[
                 "Official, fully-formatted offer letter from top colleges.",
                 "No hidden charges for starting.",
               ].map((item, index) => (
-                <motion.li className="flex gap-2 items-center mt-1 " key={index}
+                <motion.li className="flex gap-2 items-start mt-1" key={index}
                 initial={{x:-40, opacity:0}}
                 animate={{x:0,  opacity:1}}
                 transition={{duration:0.5, delay:0.3}}
                 >
-                  <CheckCircle className="size-4 text-red-600 " /> {item}
+                  <CheckCircle className="size-5 text-red-600 pt-1 " /> {item}
                 </motion.li>
               ))}
             </ul>
 
             {/* Buttons */}
-            <motion.div className="flex flex-wrap gap-6 items-center pt-2"
+            <motion.div className="flex flex-wrap flex-col gap-6 items-center pt-2 justify-center lg:justify-start lg:items-start"
                 initial={{x:-40, opacity:0}}
                 animate={{x:0,   opacity:1}}
                 transition={{duration:0.5, delay:0.6}}
             >
-              <CustomButton title="Start for just ₹1" />
+              <Phone customClassName="min-[432px]:hidden flex"/>
+              <CustomButton title="Start for just ₹1" onClick={() =>customScrollTo("ContactForm")} />
 
              
             </motion.div>
 
             {/* Stats Section */}
-            <div className="pt-12 flex gap-12 border-t border-white/10 mt-12">
+            <div className="pt-12 flex gap-12 justify-center items-center lg:justify-start border-t border-white/10 mt-12 min-[359]:flex-row flex-col ">
               {
                   [
                     {title:"5,000+", content:"Letter issued"},
                     {title:"100%", content:"Approval Rate"},
                     {title:"280+", content:"Courses"},
                   ].map((item, index) => (
-                    <motion.div  className="" key={index}
+                    <motion.div  className="w-[80px] text-nowrap" key={index}
                     initial={{y:40,  opacity:0}}
                     animate={{y:0,   opacity:1}}
                     transition={{duration:0.5, delay:0.9}}
                     >
-                      <h3 className="text-3xl font-bold text-white border-b-4 border-red-600 pb-1 pr-3">
+                      <h3 className="text-2xl min-[432px]:text-3xl font-bold text-white border-b-4 border-red-600 pb-1 ">
                         {item.title}
                       </h3>
-                      <p className="text-md text-zinc-300 mt-1">
+                      <p className="min-[432px]:text-base text-zinc-300 mt-1 text-xs">
                         {item.content}
                       </p>
                     </motion.div>

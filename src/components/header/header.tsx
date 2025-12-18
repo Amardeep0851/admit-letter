@@ -5,7 +5,7 @@ import Phone from "./phone"
 
 function Header() {
   return (
-    <div className="max-w-7xl mx-auto flex justify-between text-white px-4 xl:px-0 ">
+    <div className="max-w-7xl mx-auto flex justify-between  h-16 text-white px-4 xl:px-0 ">
       <Logo />
       {/* <Navbar /> */}
       <Phone />

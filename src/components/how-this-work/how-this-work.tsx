@@ -11,8 +11,9 @@ import {
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import CustomButton from "../ui/custom-button";
 import LeftCoumn from "./left-column";
+import { customScrollTo } from "@/lib/scroll-to";
+import CustomButton from "@/components/ui/custom-button";
 
 gsap.registerPlugin(ScrollTrigger);
 function HowThisWork() {
@@ -194,7 +195,7 @@ function HowThisWork() {
           }
           
           <div className="pt-8 md:pl-4 pl-0  pb-8">
-            <CustomButton title="Start for just 1" />
+            <CustomButton title="Start for just 1" onClick={() =>customScrollTo("ContactForm")} />
             <div 
               className="bg-zinc-200 py-2 px-3 mt-4 rounded-md flex items-center space-x-3"
             >

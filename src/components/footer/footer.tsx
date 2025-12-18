@@ -1,7 +1,9 @@
+"use client"
 import React from "react";
 import { Earth, Handshake, ShieldCheckIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { customScrollTo } from "@/lib/scroll-to";
 import FooterMotionDesign from "./footer-motion-design";
 import CustomButton, {  CustomButtonOutlineBlack } from "@/components/ui/custom-button";
 
@@ -17,7 +19,7 @@ function Footer() {
   ];
   return (
     
-    <footer className="bg-gradient-to-b from-black from-45% to-zinc-300 text-white relative overflow-hidden w-full z-50 md:pb-[240px] pb-[300px]  ">
+    <footer className="bg-gradient-to-b from-black from-45%  to-red-300  text-white relative overflow-hidden w-full z-50 md:pb-[240px] pb-[300px]  ">
       
         <div className="max-w-7xl mx-auto px-6 text-center space-y-6 pt-12 z-50 overflow-hidden  ">
           {/* Heading */}
@@ -36,8 +38,8 @@ function Footer() {
 
           {/* CTA */}
           <div className="flex flex-col md:flex-row gap-6 justify-center">
-            <CustomButton title="Talk to executive " />
-            <CustomButtonOutlineBlack title="Start for just ₹1 " />
+            <CustomButton title="Talk to executive " onClick={() =>customScrollTo("ContactForm")} />
+            <CustomButtonOutlineBlack title="Start for just ₹1"  onClick={() =>customScrollTo("ContactForm")} />
           </div>
 
           {/* Trust badges */}

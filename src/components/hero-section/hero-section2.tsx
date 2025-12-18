@@ -3,13 +3,14 @@ import LeftColumn from "./left-column";
 import RightColumn from "./right-column";
 import BackgroundAffects from "./background-affects";
 
+
 const HeroSection2 = () => {
   return (
     <div className=" bg-zinc-950">
-      <section className="w-full overflow-hidden pb-10 py-12 max-w-7xl mx-auto relative px-4 xl:px-0 ">
+      <section className="w-full overflow-hidden md:pt-12 pt-4 pb-10  max-w-7xl mx-auto relative px-4 xl:px-0 ">
       <BackgroundAffects />
-        <div className="container mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+        <div className=" w-full relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-x-12 gap-y-12 items-center border-red-900">
             <LeftColumn />
             <RightColumn />
           </div>

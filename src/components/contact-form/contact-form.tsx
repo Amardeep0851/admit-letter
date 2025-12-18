@@ -14,7 +14,9 @@ function ContactForm() {
     "Secure & Confidential",
   ]
   return (
-    <div className="grid grid-cols-1 max-w-7xl mx-auto relative px-4 xl:px-0 lg:grid-cols-6 gap-8 py-20 pr-4 overflow-hidden font-sans">
+    <section 
+    
+    className="grid grid-cols-1 max-w-7xl mx-auto relative px-4 xl:px-0 lg:grid-cols-6 gap-8 py-20 pr-4 overflow-hidden font-sans">
         
         {/* LEFT — Text Section */}
         
@@ -58,6 +60,7 @@ function ContactForm() {
 
         {/* RIGHT — Form*/}
         <motion.form 
+        id="ContactForm"
         className=" bg-white col-span-3  z-10 border border-zinc-200  p-8 rounded-md shadow-xl mr-4"
         initial={{opacity:0, y:-20}}
         whileInView={{opacity:1, y:0}}
@@ -107,7 +110,7 @@ function ContactForm() {
           <p className="text-center py-2 text-sm text-zinc-500">By sending this message, you agree to our privacy policy.</p>
         </motion.form>
 
-      </div>
+      </section>
   )
 }
 

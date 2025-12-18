@@ -22,7 +22,7 @@ function page() {
       </div>
       
       <div className="relative">
-        <Image src="/images/contact-us-agent3.png" fill alt="Agent" objectFit="cover" objectPosition="center" className="opacity-15" />
+        <Image src="/images/contact-us-agent3.jpg" fill alt="Agent" objectFit="cover" objectPosition="center" className="opacity-15" />
         <ContactForm />
       </div> 
       <div className="bg-zinc-100 ">
@@ -39,7 +39,7 @@ function page() {
         </div>
 
           <FaqSection /> 
-           <WhatsappButton /> 
+           {/* <WhatsappButton />  */}
            <Footer />
     </div>
   );
