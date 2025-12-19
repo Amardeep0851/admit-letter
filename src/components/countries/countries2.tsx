@@ -64,7 +64,9 @@ const COUNTRIES = [
     color: 'bg-amber-50',
     accent: 'text-amber-600',
     button: 'bg-amber-600 hover:bg-amber-700'
-  }
+  },
+
+
 ];
 
 const CountriesSection2 = () => {
@@ -72,11 +74,11 @@ const CountriesSection2 = () => {
 
   return (
     <div className="w-full bg-slate-50 py-16 px-4 font-sans">
-      <div className="max-w-5xl mx-auto space-y-8">
+      <div className="max-w-5xl mx-auto ">
         
         {/* Header Section */}
         <div className="text-center space-y-3">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 ">
             Where do you want to study?
           </h2>
           <p className="text-slate-500 max-w-xl mx-auto">

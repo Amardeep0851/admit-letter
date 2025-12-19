@@ -1,12 +1,15 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
 import {easeInOut, motion} from "framer-motion"
 import Image from "next/image";
+import { Skeleton } from "@/components/ui/skeleton";
 
 function LeftCoumn() {
+  const [isloading, setIsLoading] = useState(false);
+  console.log(isloading);
   return (
     <motion.div
-          className="relative w-full flex justify-center md:justify-start items-center col-span-2 md:pr-6 order-2 md:order-1"
+          className="relative w-full justify-center md:justify-start items-center col-span-2 md:pr-6 order-2 md:order-1 lg:flex hidden "
 
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -24,12 +27,16 @@ function LeftCoumn() {
               whileHover={{scale:1.1}}
               transition={{duration:0.1, ease:easeInOut}}
             >
-            <Image
-              src="/images/how-this-work3.jpg" // Replace with actual image path
-              alt="Smiling woman holding a notebook"
-              fill
-              className="object-cover drop-shadow-xl rounded-xl"
-            />
+                <Image
+                  src="/images/how-this-work3.jpg" // Replace with actual image path
+                  alt="Smiling woman holding a notebook"
+                  fill
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="/images/blur.jpg"
+                  className="object-cover drop-shadow-xl rounded-xl"
+                  onLoadingComplete={() => setIsLoading(true)}
+                />
           </motion.div>
           </div>
         </motion.div>

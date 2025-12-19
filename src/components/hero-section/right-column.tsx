@@ -16,7 +16,7 @@ const slides = [
     src: "/images/admit-letter2.jpg", 
     alt: "Students office letter", 
     universityOrCollege:"u",
-    institute:"Harvard Univversity hereisthelongname.",
+    institute:"Melbourne Univ.",
     FirstLetter:"H",    
   }, 
 ];
@@ -44,7 +44,7 @@ function RightColumn() {
                 index === current ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
               }`}
             >
-              <FloatingCard slide={slide} />
+              <FloatingCard slide={slide} index={index} />
             </div>
           ))}
         

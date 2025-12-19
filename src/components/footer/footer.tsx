@@ -19,7 +19,7 @@ function Footer() {
   ];
   return (
     
-    <footer className="bg-gradient-to-b from-black from-45%  to-red-300  text-white relative overflow-hidden w-full z-50 md:pb-[240px] pb-[300px]  ">
+    <footer className="bg-gradient-to-b from-blue-950 from-45%  to-blue-200  text-white relative overflow-hidden w-full z-50 md:pb-[240px] pb-[300px]  ">
       
         <div className="max-w-7xl mx-auto px-6 text-center space-y-6 pt-12 z-50 overflow-hidden  ">
           {/* Heading */}
@@ -43,19 +43,19 @@ function Footer() {
           </div>
 
           {/* Trust badges */}
-          <div className="flex justify-center flex-col md:flex-row space-y-4 space-x-6 text-gray-200 text-sm pt-6 font-medium">
+          <div className="flex justify-center flex-col md:flex-row  space-x-6 text-gray-200 text-sm pt-6 font-medium">
             {footerOptions.map((item) => (
               <div
-                className="bg-white/10 rounded-2xl px-4 py-2 flex flex-row justify-center items-center gap-2 w-full"
+                className="bg-white/10 rounded-2xl px-4 py-2 flex flex-row justify-center items-center gap-2 w-full my-3 "
                 key={item.content}
               >
                 <item.icon className={cn("size-4", item.color)} /> {item.content}
               </div>
             ))}
           </div>
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm pt-4 px-4 absolute bottom-0 left-0 w-full border-0 text-zinc-300 ">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-1 text-xs pt-4 px-4 absolute bottom-0 left-0 w-full border-0 text-zinc-300 p-0 md:pb-2 ">
               <p>© 2025 AdmitLetter. All rights reserved.</p>
-              <div className="flex gap-6">Designed by Amardeep Singh</div>
+              <div className="flex gap-6">Designed By Amardeep Singh</div>
           </div>
         </div>
       

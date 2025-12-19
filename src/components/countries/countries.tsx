@@ -96,12 +96,13 @@ export default function CountriesSection() {
         <TabsList className="flex overflow-x-auto w-full bg-transparent p-0 mb-4 h-24 gap-6">
           {[
             {country:"USA", image:"/images/usa.png"},
-            {country:"CANADA", image:"/images/usa.png"},
             {country:"UK", image:"/images/usa.png"},
             {country:"AUSTRALIA", image:"/images/usa.png"},
             {country:"UAE", image:"/images/usa.png"},
-            {country:"IRELAND", image:"/images/usa.png"},
             {country:"GERMANY", image:"/images/usa.png"},
+            {country:"CANADA", image:"/images/usa.png"},
+            {country:"DUBAI", image:"/images/usa.png"},
+            {country:"NEW ZEALAND", image:"/images/usa.png"},
           ].map((country) => (
             <TabsTrigger
               key={country.country}

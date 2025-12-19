@@ -2,18 +2,19 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Stars from "./stars";
 
 function FooterMotionDesign() {
   return (
     <>
       <div className="absolute md:top-60 lg:left-20 -left-10 top-[400px] -z-10 ">
         <motion.div
-          className="size-40 md:size-96 rounded-full bg-red-900 absolute opacity-30 blur-2xl"
+          className="size-40 md:size-96 rounded-full bg-blue-900 absolute opacity-30 blur-2xl"
           animate={{ scale: [1, 1.8, 1] }}
           transition={{ duration: 10, repeat: Infinity }}
         />
         <motion.div
-          className="md:size-32 size-20 rounded-full bg-red-900 absolute top-0 left-0 -z-10 opacity-20 "
+          className="md:size-32 size-20 rounded-full bg-blue-200 absolute top-0 left-0 -z-10 opacity-20 "
           animate={{ opacity: [0.4, 0.6, 0.4] }}
           transition={{ duration: 10, repeat: Infinity }}
         />
@@ -34,7 +35,7 @@ function FooterMotionDesign() {
       >
         <Image
           src="/images/aeroplane1.png"
-          className="opacity-70"
+          className="opacity-100"
           alt="Buildings"
           fill
         />
@@ -65,15 +66,30 @@ function FooterMotionDesign() {
       >
         <Image
           src="/images/aeroplane3.png"
-          className="opacity-70"
+          className="opacity-100"
           alt="Buildings"
           fill
         />
       </motion.div>
+      <Stars />
+
+      <motion.div
+        animate={{ x: [0, 200, 0] }}
+        transition={{ duration: 200 }}
+        className="absolute bottom-80 left-10 w-[200px] h-[134px] "
+      >
+        <Image
+          src="/images/cloud3.png"
+          fill
+          alt="Cloud"
+          className="opacity-20"
+        />
+      </motion.div>
+      <div className="absolute inset-0  w-full max-w-[1616px] -z-50 bg-linear-to-b from-black to-transparent" />
 
       <div className="absolute bottom-0 right-0  h-[260px] w-full max-w-[1616px] -z-50">
         <Image
-          src="/images/image-of-buildings.png"
+          src="/images/image-of-buildings2.png"
           className="opacity-100 "
           alt="Buildings"
           fill

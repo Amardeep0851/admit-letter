@@ -23,50 +23,91 @@ const COUNTRIES = [
   {
     id: 'usa',
     name: 'USA',
-    flag: 'US', // Using emojis for demo, replace with SVGs/Images
-    intake: 'Jan / May / Aug',
-    expenses: '₹20L - ₹40L', // Realistic yearly expense
-    deadline: '4-8 Months prior',
+    flag: 'US',
+    intake: 'Jan / Aug / Sep',
+    expenses: '₹25L – ₹45L',
+    deadline: '6–9 Months prior',
     exams: 'IELTS / TOEFL / DET',
-    color: 'bg-blue-50', // Subtle theme for each country
+    color: 'bg-blue-50',
     accent: 'text-blue-600',
-    button: 'bg-blue-700 hover:bg-blue-800'
+    button: 'bg-blue-700 hover:bg-blue-800',
   },
+
   {
     id: 'uk',
     name: 'UK',
     flag: 'GB',
     intake: 'Sep / Jan',
-    expenses: '₹15L - ₹30L',
-    deadline: '3-6 Months prior',
+    expenses: '₹18L – ₹35L',
+    deadline: '6–9 Months prior',
     exams: 'IELTS / PTE',
     color: 'bg-red-50',
     accent: 'text-red-700',
-    button: 'bg-red-700 hover:bg-red-800'
+    button: 'bg-red-700 hover:bg-red-800',
   },
+
+  {
+    id: 'canada',
+    name: 'Canada',
+    flag: 'CA',
+    intake: 'Jan / May / Sep',
+    expenses: '₹18L – ₹35L',
+    deadline: '6–9 Months prior',
+    exams: 'IELTS / TOEFL / PTE',
+    color: 'bg-rose-50',
+    accent: 'text-rose-600',
+    button: 'bg-rose-600 hover:bg-rose-700',
+  },
+
   {
     id: 'australia',
     name: 'Australia',
     flag: 'AU',
-    intake: 'Feb / July',
-    expenses: '₹18L - ₹35L',
-    deadline: '4-6 Months prior',
+    intake: 'Feb / Jul',
+    expenses: '₹20L – ₹40L',
+    deadline: '5–8 Months prior',
     exams: 'IELTS / PTE',
     color: 'bg-indigo-50',
     accent: 'text-indigo-600',
-    button: 'bg-indigo-600 hover:bg-indigo-700'
+    button: 'bg-indigo-600 hover:bg-indigo-700',
   },
-   {
+
+  {
     id: 'germany',
     name: 'Germany',
     flag: 'DE',
     intake: 'Apr / Oct',
-    expenses: '₹0L - ₹10L',
-    deadline: '5-7 Months prior',
+    expenses: '₹0L – ₹15L',
+    deadline: '6–8 Months prior',
     exams: 'IELTS / German',
     color: 'bg-amber-50',
     accent: 'text-amber-600',
-    button: 'bg-amber-600 hover:bg-amber-700'
+    button: 'bg-amber-600 hover:bg-amber-700',
+  },
+  
+    {
+    id: 'dubai',
+    name: 'Dubai (UAE)',
+    flag: 'AE',
+    intake: 'Jan / Sep',
+    expenses: '₹10L – ₹25L',
+    deadline: '5–7 Months prior',
+    exams: 'IELTS (some waive)',
+    color: 'bg-rose-50',
+    accent: 'text-rose-600',
+    button: 'bg-rose-600 hover:bg-rose-700'
+  },
+  {
+    id: 'new-zealand',
+    name: 'New Zealand',
+    flag: 'NZ',
+    intake: 'Feb / Jul',
+    expenses: '₹15L – ₹30L',
+    deadline: '6–8 Months prior',
+    exams: 'IELTS / PTE',
+    color: 'bg-emerald-50',
+    accent: 'text-emerald-600',
+    button: 'bg-emerald-600 hover:bg-emerald-700'
   }
 ];
 
@@ -89,7 +130,7 @@ const COUNTRIES = [
         ))
       }
         </TabsList> */}
-        <TabsList className="grid grid-cols-2 gap-4 justify-center self-center h-32 md:grid-cols-4 md:h-16">
+        <TabsList className="grid grid-cols-2 sm:grid-cols-4 sm:h-32 gap-4 justify-center self-center h-64 lg:grid-cols-7 lg:h-16">
       
       {
         COUNTRIES.map((country, index) => ( 

@@ -3,7 +3,7 @@ import React from 'react';
 import { CheckCircle } from "lucide-react";
 import {motion} from "framer-motion";
 
-import CustomButton, { CustomButtonOutlineBlack } from "@/components/ui/custom-button";
+import CustomButton from "@/components/ui/custom-button";
 import Phone from "@/components/header/phone";
 import { customScrollTo } from "@/lib/scroll-to";
 

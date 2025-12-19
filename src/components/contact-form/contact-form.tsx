@@ -1,11 +1,11 @@
 "use client";
 import React from 'react'
 import {motion} from "framer-motion";
-import { AtSign, CheckCircle, Mail,  Phone, SendHorizonal, User } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import FormPage from "./form-page";
+
 
 function ContactForm() {
   const serviceProvided = [
@@ -14,13 +14,21 @@ function ContactForm() {
     "Secure & Confidential",
   ]
   return (
-    <section 
-    
-    className="grid grid-cols-1 max-w-7xl mx-auto relative px-4 xl:px-0 lg:grid-cols-6 gap-8 py-20 pr-4 overflow-hidden font-sans">
+    <section className="relative">
+      <Image 
+          src="/images/contact-us-agent3.jpg" 
+          fill alt="Agent" 
+          objectFit="cover" 
+          objectPosition="center" 
+          className="opacity-15"
+          priority={false}
+          placeholder="blur"
+          blurDataURL="/images/blur.jpg"
+          />
         
         {/* LEFT — Text Section */}
-        
-        <div className="flex flex-col  justify-center px-4 relative col-span-3 ">
+        <div className="grid grid-cols-1 max-w-7xl mx-auto relative px-4 xl:px-0 lg:grid-cols-6 gap-8 py-20 pr-4 overflow-hidden font-sans">
+          <div className="flex flex-col  justify-center px-4 relative col-span-3 ">
           <div className="rounded-md bg-white text-sm px-4 py-1 text-green-700 font-semibold flex gap-2 items-center w-52 shadow-md border-zinc-200 mb-4">
             <div className="relative flex items-center" >
               <div className="size-2 bg-green-700 animate-ping rounded-full absolute" />
@@ -59,56 +67,10 @@ function ContactForm() {
         </div>
 
         {/* RIGHT — Form*/}
-        <motion.form 
-        id="ContactForm"
-        className=" bg-white col-span-3  z-10 border border-zinc-200  p-8 rounded-md shadow-xl mr-4"
-        initial={{opacity:0, y:-20}}
-        whileInView={{opacity:1, y:0}}
-        transition={{duration:0.5}}
-        >
-          
-          <div className="mb-6">
-            <label className="text-sm mb-1 flex items-center gap-x-1.5"><User className="size-4" /> Your Name (<span className="text-red-700 text-sm">Required</span>)</label>
-            <Input
-              type="text"
-              className="w-full border-zinc-400/60 dark:border-zinc-700"
-            />
-          </div>
-          <div className="mb-6">
-            <label className="text-sm mb-1 flex items-center gap-x-1.5"><Phone className="size-4" />Phone Number (<span className="text-red-700 text-sm">Required</span>)</label>
-            <Input
-              type="email"
-              className="w-full border-zinc-400/60 dark:border-zinc-700"
-            />
-          </div>
-
-          <div className="mb-6">
-            <label className="text-sm mb-1 flex items-center gap-x-1.5"><AtSign className="size-4" />Email Address</label>
-            <Input
-              type="email"
-              className="w-full border-zinc-400/60 dark:border-zinc-700"
-            />
-          </div>
-          
-
-          <div className="mb-6">
-            <label className="text-sm mb-1 flex items-center gap-x-1.5"><Mail className="size-4" />Message</label>
-            <Textarea
-              rows={5}
-              className="w-full border-zinc-400/60 dark:border-zinc-700"
-            />
-          </div>
-
-          <Button
-            type="submit"
-            variant="red"
-            className="w-full py-7 flex gap-2 "
-          >
-            Send Message
-            <SendHorizonal className="size-4 group-hover:translate-x-2" />
-          </Button>
-          <p className="text-center py-2 text-sm text-zinc-500">By sending this message, you agree to our privacy policy.</p>
-        </motion.form>
+        <FormPage />
+        </div>
+        
+        
 
       </section>
   )

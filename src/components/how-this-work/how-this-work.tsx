@@ -139,7 +139,7 @@ function HowThisWork() {
 
   return (
     <section className="bg-white py-20 px-4 xl:px-0">
-      <div className="max-w-7xl mx-auto  md:grid md:grid-cols-5  flex flex-col ">
+      <div className="max-w-7xl mx-auto  lg:grid lg:grid-cols-5  flex flex-col ">
 
           <LeftCoumn />
         <div className="order-1 lg:order-2 col-span-3">

@@ -8,22 +8,31 @@ import {
   Projector
 } from "lucide-react";
 import RequirementCard from "./requirement-card";
+import CustomButton from "../ui/custom-button";
+import { customScrollTo } from "@/lib/scroll-to";
 
 const REQUIREMENTS = [
+  
   {
-    category: "Identity & Basics",
+    category: "Personal & References",
     items: [
       {
-        icon: <Projector className="w-6 h-6" />,
-        title: "Valid Passport",
-        desc: "Must be valid for at least 6 months beyond your stay.",
-        badge: "Mandatory"
+        icon: <FileText className="w-6 h-6" />,
+        title: "Statement of Purpose",
+        desc: "A personal essay describing your goals and motivations.",
+        badge: "Highly Critical"
       },
       {
-        icon: <User className="w-6 h-6" />,
-        title: "CV / Resume",
-        desc: "Updated summary of your academic and professional history.",
-        badge: "Mandatory"
+        icon: <Briefcase className="w-6 h-6" />,
+        title: "Letters of Recommendation",
+        desc: "Reference letters from your professors or past employers.",
+        badge: "2-3 Letters"
+      },
+      {
+        icon: <PenTool className="w-6 h-6" />,
+        title: "Portfolio / Essays",
+        desc: "Required for Arts/Design courses or specific universities.",
+        badge: "Optional"
       }
     ]
   },
@@ -51,25 +60,19 @@ const REQUIREMENTS = [
     ]
   },
   {
-    category: "Personal & References",
+    category: "Identity & Basics",
     items: [
       {
-        icon: <FileText className="w-6 h-6" />,
-        title: "Statement of Purpose",
-        desc: "A personal essay describing your goals and motivations.",
-        badge: "Highly Critical"
+        icon: <Projector className="w-6 h-6" />,
+        title: "Valid Passport",
+        desc: "Must be valid for at least 6 months beyond your stay.",
+        badge: "Mandatory"
       },
       {
-        icon: <Briefcase className="w-6 h-6" />,
-        title: "Letters of Recommendation",
-        desc: "Reference letters from your professors or past employers.",
-        badge: "2-3 Letters"
-      },
-      {
-        icon: <PenTool className="w-6 h-6" />,
-        title: "Portfolio / Essays",
-        desc: "Required for Arts/Design courses or specific universities.",
-        badge: "Optional"
+        icon: <User className="w-6 h-6" />,
+        title: "CV / Resume",
+        desc: "Updated summary of your academic and professional history.",
+        badge: "Mandatory"
       }
     ]
   }
@@ -131,9 +134,8 @@ const RequirementsSection = () => {
               </p>
             </div>
           </div>
-          <button className="whitespace-nowrap px-6 py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-colors">
-            Get Document Help
-          </button>
+          <CustomButton title="Get Document Help" onClick={() => customScrollTo("ContactForm")} />
+          
         </div>
 
       </div>
