@@ -6,7 +6,11 @@ import {motion} from "framer-motion"
 function BackgroundAffects() {
   return (
     <div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] aspect-square bg-zinc-900 rounded-full opacity-60 pointer-events-none" />
+      <motion.div 
+      initial={{opacity:0}}
+      animate={{opacity:1}}
+      transition={{delay:4, duration:1}}
+      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] aspect-square bg-zinc-900 rounded-full opacity-60 pointer-events-none" />
       {/* Lime accent circle segment on the far right */}
       <motion.div 
       animate={{x:[0, 100, 100, 200, 100,  0], y:[0, 100, 200, 200, 100,  0]}}

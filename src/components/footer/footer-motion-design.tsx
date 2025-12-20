@@ -73,19 +73,8 @@ function FooterMotionDesign() {
       </motion.div>
       <Stars />
 
-      <motion.div
-        animate={{ x: [0, 200, 0] }}
-        transition={{ duration: 200 }}
-        className="absolute bottom-80 left-10 w-[200px] h-[134px] "
-      >
-        <Image
-          src="/images/cloud3.png"
-          fill
-          alt="Cloud"
-          className="opacity-20"
-        />
-      </motion.div>
       <div className="absolute inset-0  w-full max-w-[1616px] -z-50 bg-linear-to-b from-black to-transparent" />
+      {/* <div className="absolute inset-0  w-full max-w-[1616px] -z-50 bg-linear-to-b from-transparent 50% to-red-500/15" /> */}
 
       <div className="absolute bottom-0 right-0  h-[260px] w-full max-w-[1616px] -z-50">
         <Image
