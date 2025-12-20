@@ -7,17 +7,27 @@ import Stars from "./stars";
 function FooterMotionDesign() {
   return (
     <>
+    
       <div className="absolute md:top-60 lg:left-20 -left-10 top-[400px] -z-10 ">
-        <motion.div
-          className="size-40 md:size-96 rounded-full bg-blue-900 absolute opacity-30 blur-2xl"
-          animate={{ scale: [1, 1.8, 1] }}
-          transition={{ duration: 10, repeat: Infinity }}
-        />
-        <motion.div
-          className="md:size-32 size-20 rounded-full bg-blue-200 absolute top-0 left-0 -z-10 opacity-20 "
+        
+           <motion.div
+          className=" md:size-32 size-20 rounded-full bg-red-200 absolute top-0 left-0 -z-10"
           animate={{ opacity: [0.4, 0.6, 0.4] }}
           transition={{ duration: 10, repeat: Infinity }}
         />
+          <motion.div
+          className="  md:size-[500px] size-[300px] rounded-full bg-red-900 absolute  -top-32 -left-15 blur-2xl opacity-20"
+          animate={{ scale: [1, 1.3, 1] }}
+          transition={{ duration: 10, repeat: Infinity }}
+        />
+          <motion.div
+          className="  md:size-[900px] size-[500px] rounded-full bg-red-900 absolute  -top-32 -left-15 blur-2xl opacity-10"
+          animate={{ scale: [1, 1.3, 1] }}
+          transition={{ duration: 10, repeat: Infinity }}
+        />
+
+        
+       
       </div>
 
       <motion.div
@@ -78,11 +88,15 @@ function FooterMotionDesign() {
 
       <div className="absolute bottom-0 right-0  h-[260px] w-full max-w-[1616px] -z-50">
         <Image
-          src="/images/image-of-buildings2.png"
+          src="/images/image-of-buildings.png"
           className="opacity-100 "
           alt="Buildings"
           fill
           objectFit="cover"
+          priority={false}
+          loading="lazy"
+          placeholder="blur"
+          blurDataURL="/images/blur.jpg"
         />
       </div>
     </>

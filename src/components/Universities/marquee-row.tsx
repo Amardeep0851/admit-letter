@@ -29,8 +29,8 @@ const MarqueeRow = ({
     <div className={cn("relative w-full overflow-hidden py-8", className)}>
       
       {/* 1. GRADIENT MASKS (Prevents logos from popping in/out) */}
-      <div className="absolute inset-y-0 left-0 w-24 md:w-40 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
-      <div className="absolute inset-y-0 right-0 w-24 md:w-40 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-y-0 left-0 w-10 md:w-40 bg-gradient-to-r from-white via-white/50 to-transparent z-10 pointer-events-none "  />
+      <div className="absolute inset-y-0 right-0 w-10 md:w-40 bg-gradient-to-l from-white via-white/50 to-transparent z-10 pointer-events-none " />
 
       <motion.div
         className="flex gap-8 md:gap-12 w-max"
@@ -47,9 +47,7 @@ const MarqueeRow = ({
             key={`${item.name}-${idx}`}
             whileTap={{ scale: 0.95 }}
             className={cn(
-                "border-8 group relative flex items-center justify-center w-[140px] h-[70px] md:w-[160px] md:h-[80px] rounded-2xl transition-all duration-300",
-                "bg-white border border-slate-100 shadow-sm", 
-                "lg:bg-slate-50/50 lg:hover:bg-white lg:hover:shadow-xl lg:hover:-translate-y-1"
+                " group relative flex items-center justify-center w-[140px] h-[70px] md:w-[160px] md:h-[80px] rounded-2xl transition-all duration-300 lg:hover:-translate-y-1"
             )}
           >
             {/* 3. TOOLTIP: Only visible on Desktop hover */}

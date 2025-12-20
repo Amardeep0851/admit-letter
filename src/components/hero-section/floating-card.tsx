@@ -17,10 +17,10 @@ export default function FloatingCard({slide, index}:slideProps) {
 
   return (
     <>
-      <div className="relative w-[320px] h-[470px] min-[390px]:w-[370px] cursor-pointer group bg-white/95 rounded-lg mx-auto shadow-2xl/10 shadow-red-700 border-b-4 border-red-700 hover:scale-105 transition-all duration-300 " >
+      <div className="relative w-[320px] h-[470px] min-[390px]:w-[370px] cursor-pointer group bg-white rounded-lg mx-auto shadow-2xl/10 shadow-red-700 border-b-4 border-red-700  transition-all duration-300 " >
         
         <div className="absolute inset-0 rounded-xl p-6 shadow-2xl/30 shadow-red-700 flex flex-col justify-between overflow-hidden">
-        <div className="bg-red-700 size-40 absolute -left-12 -top-12 opacity-10 rounded-full blur-2xl" />
+        <div className="bg-red-700 size-40 absolute -left-12 -top-12 opacity-10 rounded-full blur-2xl z-[9999]" />
           
           {/* Card Header */}
           <div className="flex items-center  justify-between h-[68px] border-b border-zinc-200 pb-4 pt-2 ">
@@ -38,12 +38,12 @@ export default function FloatingCard({slide, index}:slideProps) {
           </div>
 
           {/* Card Body - The Letter Content */}
-          <div className="relative h-[400px] w-full rounded-md mt-4 ">
+          <div className="relative h-[400px] w-full rounded-md  ">
               <Image 
                 src={slide.src} 
                 alt="" 
                 fill 
-                className="rounded-md opacity-90  "
+                className="rounded-md opacity-90   "
                 placeholder="blur"
                 blurDataURL="/images/blur.jpg"
                 priority={index === 0}

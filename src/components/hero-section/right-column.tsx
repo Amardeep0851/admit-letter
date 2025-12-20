@@ -1,20 +1,20 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from 'framer-motion';
 
 import FloatingCard from "./floating-card";
-import {motion} from "framer-motion"
 
 const slides = [
   { 
     src: "/images/admit-letter1.jpg", 
     alt: "Students office letter", 
     universityOrCollege:"u",
-    institute:"Harvard Univ.",
+    institute:"Toronto Univ.",
     FirstLetter:"H",    
   }, 
   { 
-    src: "/images/admit-letter2.jpg", 
+    src: "/images/admit-letter1.jpg", 
     alt: "Students office letter", 
     universityOrCollege:"u",
     institute:"McMaster Univ.",
@@ -36,11 +36,7 @@ function RightColumn() {
   }, []);
 
   return (
-    <motion.div 
-    initial={{x:20, opacity:0}}
-    animate={{x:0, opacity:1}}
-    transition={{duration:1}}
-    className="relative col-span-2 h-[500px] w-full ">
+    <div className="relative col-span-2 h-[500px] w-full ">
         <div className="z-40 flex justify-center items-center group  ">
           {slides.map((slide, index) => (
             <div
@@ -57,7 +53,7 @@ function RightColumn() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600 opacity-40 blur-3xl w-[330px] aspect-square border-red-700 -z-40 pointer-events-none" />
       </div>
 
-    </motion.div>
+    </div>
   );
 }
 

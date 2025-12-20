@@ -1,7 +1,7 @@
 import React from "react";
 import LeftColumn from "./left-column";
-import RightColumn from "./right-column";
 import BackgroundAffects from "./background-affects";
+import CoinFlipLetter from "../test/flip-coin2";
 
 
 const HeroSection2 = () => {
@@ -12,7 +12,7 @@ const HeroSection2 = () => {
         <div className=" w-full relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-x-12 gap-y-12 items-center border-red-900">
             <LeftColumn />
-            <RightColumn />
+             <CoinFlipLetter />
           </div>
         </div>
       </section>

@@ -1,7 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence} from "framer-motion";
 import {
   Accordion,
   AccordionContent,
@@ -9,6 +8,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import RightFaq from "./right-faq";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Slice } from "lucide-react";
 
 
 type FaqItem =
@@ -150,6 +152,18 @@ const faqData:FaqItem[] = [
 ];
 
 export default function FaqSection() {
+  const [loadQuestions, setLoadQuestions] = useState<number>(5);
+  const handleLoadMore = () => {
+    setLoadQuestions((prev) => {
+      if(prev+5 > faqData.length ){
+        return faqData.length 
+      }
+      else {
+          return prev+5
+        }
+    } )
+  }
+  console.log(loadQuestions);
   return (
     <section className="py-20 px-4 max-w-7xl mx-auto relative xl:px-0">
       <div className="space-y-4  flex flex-col justify-center items-center pb-12 ">
@@ -164,7 +178,10 @@ export default function FaqSection() {
       <div className="grid grid-cols-1 lg:grid-cols-7 ">
          <div className="space-y-8 col-span-4 order-2 lg:order-1">
         <Accordion type="single" collapsible className="w-full space-y-4">
-          {faqData.map((faq) => (
+         
+          {
+            
+          faqData.slice(0, loadQuestions).map((faq) => (
             <AccordionItem
               key={faq.id}
               value={faq.id}
@@ -192,6 +209,16 @@ export default function FaqSection() {
             </AccordionItem>
           ))}
         </Accordion>
+        <div className=" flex items-center justify-center">
+          <Button 
+          onClick={handleLoadMore} 
+          size='lg' 
+          className="cursor-pointer"
+          disabled={faqData.length === loadQuestions}
+          >
+          Load More
+        </Button>
+        </div>
       </div>
       <RightFaq />
       </div>

@@ -19,7 +19,7 @@ function Footer() {
   ];
   return (
     
-    <footer className="bg-gradient-to-b from-blue-950 from-45%  to-blue-200  text-white relative overflow-hidden w-full z-50 md:pb-[240px] pb-[300px]  ">
+    <footer className="bg-gradient-to-b from-zinc-800 from-45%  to-red-200  text-white relative overflow-hidden w-full z-50 md:pb-[240px] pb-[300px]  ">
       
         <div className="max-w-7xl mx-auto px-6 text-center space-y-6 pt-12 z-50 overflow-hidden  ">
           {/* Heading */}

@@ -189,9 +189,9 @@ const UniversitySection2 = () => {
       <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
 
       <div className="flex flex-col gap-0">
-        <MarqueeRow items={universities} direction="left" speed={40} />
+        <MarqueeRow items={universities.slice(0,9)} direction="left" speed={40} />
         
-        <MarqueeRow items={[...universities].reverse()} direction="right" speed={50} />
+        <MarqueeRow items={[...universities.slice(8)].reverse()} direction="right" speed={50} />
       </div>
 
     </section>

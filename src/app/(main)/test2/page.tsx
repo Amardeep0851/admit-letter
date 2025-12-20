@@ -151,78 +151,11 @@ export default function HeroSection() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-900/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-900/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-      </div>
-
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-xl border-b border-red-900/20">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-red-800 rounded-lg flex items-center justify-center shadow-lg shadow-red-900/50">
-              <GraduationCap className="w-6 h-6" />
-            </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-white to-red-500 bg-clip-text text-transparent">
-              ADMIT LETTER
-            </span>
-          </div>
-          <div className="flex items-center gap-2 text-sm">
-            <Phone className="w-4 h-4" />
-            <span>+91-9232322929</span>
-          </div>
-        </div>
-      </header>
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Content */}
-          <div className="space-y-8">
-            <h1 className="text-6xl lg:text-7xl font-black leading-tight">
-              Get a verified offer letter for just{' '}
-              <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">
-                ₹1
-              </span>
-            </h1>
-
-            <div className="space-y-4">
-              <div className="flex items-center gap-3 text-lg text-gray-300">
-                <div className="w-6 h-6 rounded-full border-2 border-red-500 flex items-center justify-center flex-shrink-0">
-                  <Check className="w-4 h-4 text-red-500" />
-                </div>
-                <span>Official, fully-formatted offer letter from top colleges.</span>
-              </div>
-              <div className="flex items-center gap-3 text-lg text-gray-300">
-                <div className="w-6 h-6 rounded-full border-2 border-red-500 flex items-center justify-center flex-shrink-0">
-                  <Check className="w-4 h-4 text-red-500" />
-                </div>
-                <span>No hidden charges for starting.</span>
-              </div>
-            </div>
-
-            <button className="group bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-3 shadow-2xl shadow-red-900/50 transition-all duration-300 hover:scale-105 hover:shadow-red-900/70">
-              Start for just ₹1
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-
-            {/* Stats */}
-            <div className="flex gap-12 pt-8">
-              <div className="border-l-4 border-red-600 pl-6">
-                <div className="text-5xl font-black text-red-500">5,000+</div>
-                <div className="text-gray-400 font-semibold mt-1">Letter issued</div>
-              </div>
-              <div className="border-l-4 border-red-600 pl-6">
-                <div className="text-5xl font-black text-red-500">100%</div>
-                <div className="text-gray-400 font-semibold mt-1">Approval Rate</div>
-              </div>
-              <div className="border-l-4 border-red-600 pl-6">
-                <div className="text-5xl font-black text-red-500">280+</div>
-                <div className="text-gray-400 font-semibold mt-1">Courses</div>
-              </div>
-            </div>
-          </div>
+          
 
           {/* Right Content - Offer Cards */}
           <div className="relative h-[600px] flex items-center justify-center" style={{ perspective: '1500px' }}>
