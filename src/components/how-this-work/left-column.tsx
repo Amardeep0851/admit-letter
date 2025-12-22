@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import {easeInOut, motion} from "framer-motion"
 import Image from "next/image";
-import { Skeleton } from "@/components/ui/skeleton";
 
 function LeftCoumn() {
   const [isloading, setIsLoading] = useState(false);

@@ -173,7 +173,7 @@ const CoinFlipLetter = () => {
                 }}
               >
                 {/* Pass current letter data to RightColumn */}
-                <FloatingCard slide={currentLetter } index={slides[currentIndex]}  />
+                <FloatingCard slide={currentLetter } index={currentIndex}  />
               </motion.div>
             </motion.div>
           )}

@@ -59,6 +59,7 @@ function FormPage() {
         form.reset();
       }
     } catch (error) {
+      console.log(error);
       toast.error("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
