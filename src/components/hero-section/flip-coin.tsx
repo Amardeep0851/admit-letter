@@ -1,41 +1,101 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import RightColumn from "../hero-section/right-column";
+import FloatingCard from "./floating-card";
 
+// Sample data for different letters/images
 
+const slides = [
+  { 
+    src: "/images/admit-letter1.jpg", 
+    alt: "Students office letter", 
+    universityOrCollege:"u",
+    institute:"Toronto Univ.",
+    FirstLetter:"H",    
+  }, 
+  { 
+    src: "/images/admit-letter1.jpg", 
+    alt: "Students office letter", 
+    universityOrCollege:"u",
+    institute:"McMaster Univ.",
+    FirstLetter:"M",    
+  }, 
+];
 
 const CoinFlipLetter = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [showCoin, setShowCoin] = useState(true);
   const [showLetter, setShowLetter] = useState(false);
   const [animationComplete, setAnimationComplete] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
-  useEffect(() => {
+  // Function to start the coin-to-letter animation
+  const startAnimation = () => {
+    setShowCoin(true);
+    setShowLetter(false);
+    setAnimationComplete(false);
+    setIsTransitioning(true);
+
     // Coin stays visible for 2 seconds, then starts flipping
-    const timer = setTimeout(() => {
+    setTimeout(() => {
       setShowCoin(false);
       // Letter appears right after coin scales to 0
       setTimeout(() => {
         setShowLetter(true);
+        setIsTransitioning(false);
       }, 1000); // This matches the coin exit duration
     }, 2000); // Coin stays for 2 seconds
+  };
 
-    return () => clearTimeout(timer);
+  // Function to transition to next letter
+  const transitionToNext = () => {
+    if (isTransitioning) return; // Prevent multiple clicks during transition
+
+    // Hide current letter
+    setShowLetter(false);
+    setAnimationComplete(false);
+
+    // Wait for letter to fade out, then change index and start new animation
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev + 1) % slides.length);
+      startAnimation();
+    }, 500); // Wait for letter exit animation
+  };
+
+  // Initial animation on mount
+  useEffect(() => {
+    startAnimation();
   }, []);
 
+  // Auto-advance to next letter every 8 seconds
+  useEffect(() => {
+    const autoAdvance = setInterval(() => {
+      transitionToNext();
+    }, 8000); // Change every 8 seconds (2s coin + 1s flip + 5s letter display)
+
+    return () => clearInterval(autoAdvance);
+  }, [currentIndex, isTransitioning]);
+
+  const currentLetter = slides[currentIndex];
 
   return (
-    <div>
-      <div className="h-[500px] relative flex justify-center items-center w-[400px]">
+    <div className=" col-span-2 flex justify-center items-center flex-col ">
+      <div className="w-[320px] h-[470px] min-[390px]:w-[370px]  relative flex justify-center items-center  ">
         
         {/* Coin Animation */}
         <AnimatePresence>
           {showCoin && (
             <motion.div
-              initial={{ scale: 1, rotateY: 0 }}
+              key={`coin-${currentIndex}`}
+              initial={{ scale: 0, rotateY: 0, opacity: 0 }}
               animate={{
                 scale: 1,
                 rotateY: 0,
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                  ease: [0.34, 1.56, 0.64, 1]
+                }
               }}
               exit={{
                 rotateY: [0, 180, 360, 540, 720],
@@ -78,9 +138,10 @@ const CoinFlipLetter = () => {
         </AnimatePresence>
 
         {/* Letter Animation */}
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           {showLetter && (
             <motion.div
+              key={`letter-${currentIndex}`}
               initial={{ 
                 scale: 0,
                 opacity: 0,
@@ -88,6 +149,11 @@ const CoinFlipLetter = () => {
               animate={{ 
                 scale: 1,
                 opacity: 1,
+              }}
+              exit={{
+                scale: 0,
+                opacity: 0,
+                transition: { duration: 0.5 }
               }}
               transition={{
                 duration: 0.6,
@@ -106,7 +172,8 @@ const CoinFlipLetter = () => {
                   ease: "easeInOut"
                 }}
               >
-                <RightColumn />
+                {/* Pass current letter data to RightColumn */}
+                <FloatingCard slide={currentLetter } index={slides[currentIndex]}  />
               </motion.div>
             </motion.div>
           )}
@@ -117,7 +184,7 @@ const CoinFlipLetter = () => {
           <>
             {[...Array(8)].map((_, i) => (
               <motion.div
-                key={i}
+                key={`sparkle-${currentIndex}-${i}`}
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ 
                   opacity: [0, 1, 0],
@@ -139,6 +206,34 @@ const CoinFlipLetter = () => {
           </>
         )}
       </div>
+
+      {/* Navigation Dots */}
+      <div className="flex justify-center items-center gap-2 mt-4 w-full">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => {
+              if (!isTransitioning && index !== currentIndex) {
+                setShowLetter(false);
+                setAnimationComplete(false);
+                setTimeout(() => {
+                  setCurrentIndex(index);
+                  startAnimation();
+                }, 500);
+              }
+            }}
+            disabled={isTransitioning}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              index === currentIndex 
+                ? 'w-8 bg-red-700' 
+                : 'w-2 bg-red-400 hover:bg-gray-300'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
+      
     </div>
   );
 };

@@ -24,31 +24,35 @@ function HowThisWork() {
   const divElement = useRef<(HTMLHeadingElement | null)[]>(null);
 
   const steps = [
-    {
-      step:1,
-      title:"Submit your details",
-      content:"Fill out our secure form or call us directly. We just need your basic profile to get started.",
-      icon:FileText,
-    },
-    {
-      step:2,
-      title:"Profile Verification",
-      content:"Our experts review your documents and academic history to ensure 100% eligibility.",
-      icon:UserCheck,
-    },
-    {
-      step:3,
-      title:"Application Submission",
-      content:"We handle the complex paperwork and submit the official application on your behalf.",
-      icon:Send,
-    },
-    {
-      step:4,
-      title:"Receive Admit Letter",
-      content:"Get your official, fully-formatted admit letter delivered to your inbox for just ₹1.",
-      icon:GraduationCap,
-    },
-  ]
+  {
+    step: 1,
+    title: "Start for ₹1",
+    content:
+      "Create your profile and get a quick eligibility check. No commitment, just clarity.",
+    icon: FileText,
+  },
+  {
+    step: 2,
+    title: "Shortlist & Strategy",
+    content:
+      "Get 3-6 matched courses or universities with clear requirements, fees, and deadlines.",
+    icon: UserCheck,
+  },
+  {
+    step: 3,
+    title: "Documents & Application",
+    content:
+      "We help prepare SOPs, LORs, and financial checklists, then submit genuine applications.",
+    icon: Send,
+  },
+  {
+    step: 4,
+    title: "Offer Letter & Next Steps",
+    content:
+      "Track decisions, book IELTS/DET if needed, and prepare for the visa stage.",
+    icon: GraduationCap,
+  },
+];
 
   useEffect(() => {
     divStep.current.map((el) => {
