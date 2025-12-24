@@ -1,7 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+import { handleWhatsappClick } from "./handle-whatsapp";
 
 export default function WhatsappBubble() {
   const messages = [
@@ -42,11 +44,8 @@ export default function WhatsappBubble() {
     return () => clearTimeout(timer);
   }, [cycleCount, messages.length]);
 
-  const phone = "91XXXXXXXXXX";
 
-  const openWhatsapp = () => {
-    window.open(`https://wa.me/${phone}`, "_blank");
-  };
+  
 
   return (
     <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end space-y-3">
@@ -71,7 +70,7 @@ export default function WhatsappBubble() {
 
       {/* WhatsApp Button with WAVE Hover Animation */}
       <motion.button
-        onClick={openWhatsapp}
+        onClick={handleWhatsappClick}
         className="bg-green-500 text-white rounded-full w-16 h-16 shadow-xl flex items-center justify-center cursor-pointer"
         whileHover={{ 
           rotate: [0, -10, 10, -6, 6, 0],

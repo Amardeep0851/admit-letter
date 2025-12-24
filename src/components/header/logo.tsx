@@ -6,7 +6,7 @@ function Logo() {
   return (
     <div className="relative w-[241px]  text-nowrap">
       <div className="absolute top-4 text-3xl font-bold text-red-600">
-        ADMIT LETTER
+        ADMIT <span className="text-white">LETTER</span>
       </div>
       
       <motion.img 

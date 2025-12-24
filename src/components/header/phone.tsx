@@ -4,11 +4,14 @@ import React from "react";
 import { PhoneCall } from "lucide-react"; // Assuming you use lucide-react
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { handleWhatsappClick } from "../whatsapp/handle-whatsapp";
 
 export default function ContactPhone({customClassName}:{customClassName?:string}) {
   
   return (
-    <div className={cn("pt-2 items-center gap-2 font-semibold min-[432]:flex hidden", customClassName)}>
+    <div 
+    onClick={handleWhatsappClick}
+    className={cn("pt-0 items-center gap-2 font-semibold min-[438]:flex hidden text-lg cursor-pointer ", customClassName)}>
       
       <motion.div
         animate={{
@@ -21,7 +24,7 @@ export default function ContactPhone({customClassName}:{customClassName?:string}
           repeatDelay: 2      
         }}
       >
-        <PhoneCall className="size-4" />
+        <PhoneCall className="size-5" />
       </motion.div>
       
       <span>+91-9232322929</span>

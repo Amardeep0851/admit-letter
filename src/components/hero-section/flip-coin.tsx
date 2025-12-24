@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import FloatingCard from "./floating-card";
+import Image from "next/image";
 
 // Sample data for different letters/images
 
@@ -80,7 +81,7 @@ const CoinFlipLetter = () => {
 
   return (
     <div className=" col-span-2 flex justify-center items-center flex-col ">
-      <div className="w-[320px] h-[470px] min-[390px]:w-[370px]  relative flex justify-center items-center  ">
+      <div className="w-[320px] h-[470px] min-[390px]:w-[370px]  relative flex justify-center items-center" >
         
         {/* Coin Animation */}
         <AnimatePresence>
@@ -109,15 +110,20 @@ const CoinFlipLetter = () => {
               className="absolute"
               style={{ transformStyle: 'preserve-3d' }}
             >
-              {/* Coin Front */}
-              <div className="relative w-48 h-48 rounded-full bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 shadow-2xl flex items-center justify-center border-8 border-yellow-300">
+              <div className="relative w-64 h-64 rounded-full shadow-2xl flex items-center justify-center border-yellow-300
+              ">
+                <Image src="/images/coin.png"
+              fill
+              alt="1 Rupee Coin."
+              className=""
+              />
+                {/* 
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-transparent to-yellow-700 opacity-50"></div>
                 <div className="relative z-10 text-center">
                   <div className="text-6xl font-black text-yellow-900">₹1</div>
                   <div className="text-xs font-bold text-yellow-800 mt-1">ADMIT LETTER</div>
                 </div>
                 
-                {/* Coin Details */}
                 <div className="absolute inset-0 rounded-full">
                   {[...Array(12)].map((_, i) => (
                     <div
@@ -132,7 +138,9 @@ const CoinFlipLetter = () => {
                     />
                   ))}
                 </div>
-              </div>
+                */}
+              </div> 
+              
             </motion.div>
           )}
         </AnimatePresence>

@@ -1,7 +1,7 @@
 "use client"
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger"
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { 
   BookOpen,
   FileText, 
@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import LeftCoumn from "./left-column";
+import LeftColumn from "./left-column";
 import { customScrollTo } from "@/lib/scroll-to";
 import CustomButton from "@/components/ui/custom-button";
 
@@ -22,14 +22,16 @@ function HowThisWork() {
   const divLine = useRef<(HTMLDivElement | null)[]>([]);
   const divMainElement = useRef<(HTMLDivElement | null)[]>([]);
   const divElement = useRef<(HTMLHeadingElement | null)[]>(null);
+  const [currentImage,setCurrentImage] = useState(0)
 
-  const steps = [
+  const steps = useMemo(() =>  [
   {
     step: 1,
     title: "Start for ₹1",
     content:
       "Create your profile and get a quick eligibility check. No commitment, just clarity.",
     icon: FileText,
+    image:"/images/howthiswork/1.jpg"
   },
   {
     step: 2,
@@ -37,6 +39,7 @@ function HowThisWork() {
     content:
       "Get 3-6 matched courses or universities with clear requirements, fees, and deadlines.",
     icon: UserCheck,
+    image:"/images/howthiswork/2.jpg"
   },
   {
     step: 3,
@@ -44,6 +47,7 @@ function HowThisWork() {
     content:
       "We help prepare SOPs, LORs, and financial checklists, then submit genuine applications.",
     icon: Send,
+    image:"/images/howthiswork/3.jpg"
   },
   {
     step: 4,
@@ -51,8 +55,9 @@ function HowThisWork() {
     content:
       "Track decisions, book IELTS/DET if needed, and prepare for the visa stage.",
     icon: GraduationCap,
+    image:"/images/howthiswork/4.jpg"
   },
-];
+],[]);
 
   useEffect(() => {
     divStep.current.map((el) => {
@@ -77,7 +82,7 @@ function HowThisWork() {
 
     
 
-    divMainElement.current.map((el) => {
+    divMainElement.current.map((el, index) => {
       gsap.fromTo(el, {
         opacity:0.5,
         filter:"grayScale(100%)",
@@ -93,6 +98,9 @@ function HowThisWork() {
           start: "top 55%", 
           end:"bottom 60%",
           scrub: true,
+          onEnter:() => setCurrentImage(index),
+          onEnterBack:() => setCurrentImage(index)
+
         }
       })
     });
@@ -142,11 +150,9 @@ function HowThisWork() {
   };
 
   return (
-    <section className="bg-white py-20 px-4 xl:px-0">
-      <div className="max-w-7xl mx-auto  lg:grid lg:grid-cols-5  flex flex-col ">
-
-          <LeftCoumn />
-        <div className="order-1 lg:order-2 col-span-3">
+    <section className="bg-white my-20 px-4 xl:px-0 ">
+      <div className="max-w-7xl mx-auto  ">
+        <div className="flex justify-center items-center flex-col ">
           <h2 
           ref={addToRefs}
           className="text-red-700 flex gap-2 items-center font-semibold">
@@ -155,9 +161,13 @@ function HowThisWork() {
           </h2>
           <h3 
           ref={() => {divElement.current}}
-          className="text-5xl font-bold pt-3 pb-8">
+          className="md:text-6xl font-bold pt-3 pb-8 text-5xl ">
             How does it work?
           </h3>
+        </div>
+        <div className=" lg:grid lg:grid-cols-5  flex flex-col">
+          <LeftColumn currentImage={currentImage} steps={steps} />
+        <div className=" order-1 lg:order-2 col-span-3">
           {
             steps.map((item, index) => 
               {
@@ -198,7 +208,7 @@ function HowThisWork() {
             })
           }
           
-          <div className="pt-8 md:pl-4 pl-0  pb-8">
+          <div className="pt-8 md:pl-4 pl-0 ">
             <CustomButton title="Start for just 1" onClick={() =>customScrollTo("ContactForm")} />
             <div 
               className="bg-zinc-200 py-2 px-3 mt-4 rounded-md flex items-center space-x-3"
@@ -209,6 +219,8 @@ function HowThisWork() {
               </p>
             </div>
           </div>
+        </div>
+
         </div>
       </div>
     </section>

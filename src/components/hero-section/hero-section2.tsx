@@ -13,6 +13,7 @@ const HeroSection2 = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-x-12 gap-y-12 items-center border-red-900 ">
             <LeftColumn />
              <CoinFlipLetter />
+             
           </div>
         </div>
       </section>

@@ -37,7 +37,7 @@ const COUNTRIES = [
     id: 'uk',
     name: 'UK',
     flag: 'GB',
-    intake: 'Sep / Jan',
+    intake: 'Jan / Sep',
     expenses: '₹18L – ₹35L',
     deadline: '6–9 Months prior',
     exams: 'IELTS / PTE',

@@ -1,14 +1,26 @@
 "use client"
-import React, { useState } from 'react';
-import {easeInOut, motion} from "framer-motion"
+import React, { memo, useState } from 'react';
+import {AnimatePresence, easeInOut, motion} from "framer-motion"
 import Image from "next/image";
+import { LucideIcon } from "lucide-react";
 
-function LeftCoumn() {
+type LeftColumnProps = {
+  currentImage:number;
+  steps:{
+    step:number;
+    title:string;
+    content:string;
+    icon:LucideIcon;
+    image:string;
+  }[]
+}
+
+function LeftColumn({currentImage, steps}:LeftColumnProps) {
   const [isloading, setIsLoading] = useState(false);
-  console.log(isloading);
+  console.log(currentImage);
   return (
     <motion.div
-          className="relative w-full justify-center md:justify-start items-center col-span-2 md:pr-6 order-2 md:order-1 lg:flex hidden "
+          className="relative w-full justify-center md:justify-start items-start col-span-2 md:pr-6 order-2 md:order-1 lg:flex hidden "
 
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -20,26 +32,32 @@ function LeftCoumn() {
           {/* Green Abstract Shape */}
           {/* <div className="absolute top-1/4 left-0 -translate-x-1/2 w-[200px] h-[300px] bg-red-700 rounded-r-full opacity-90 z-10 mix-blend-multiply"></div> */}
 
-          {/* Woman Image */}
-          <div className="md:w-[400px] aspect-square z-20 w-full overflow-hidden rounded-md">
-            <motion.div className="relative w-full h-full "
+          {/* Woman Image */} 
+          <div className="md:w-[400px] aspect-square z-20 w-full overflow-hidden rounded-md lg:sticky top-24 ">
+            <AnimatePresence mode="wait">
+              <motion.div className="relative w-full h-full "
+              key={currentImage}
               whileHover={{scale:1.1}}
               transition={{duration:0.1, ease:easeInOut}}
-            >
-                <Image
-                  src="/images/how-this-work3.jpg" // Replace with actual image path
-                  alt="Smiling woman holding a notebook"
-                  fill
-                  loading="lazy"
-                  placeholder="blur"
-                  blurDataURL="/images/blur.jpg"
-                  className="object-cover drop-shadow-xl rounded-xl"
-                  onLoadingComplete={() => setIsLoading(true)}
-                />
-          </motion.div>
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 50 }}
+                >
+                    <Image
+                      src={steps[currentImage].image} // Replace with actual image path
+                      alt="Smiling woman holding a notebook"
+                      fill
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL="/images/blur.jpg"
+                      className="object-cover drop-shadow-xl rounded-xl"
+                      onLoadingComplete={() => setIsLoading(true)}
+                    />
+              </motion.div>
+            </AnimatePresence>
           </div>
         </motion.div>
   )
 }
 
-export default LeftCoumn
+export default memo(LeftColumn)

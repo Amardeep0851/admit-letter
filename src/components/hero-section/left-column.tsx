@@ -1,7 +1,8 @@
 "use client"
 import React from 'react';
-import { CheckCircle } from "lucide-react";
+import CountUp from 'react-countup';
 import {motion} from "framer-motion";
+import { CheckCircle } from "lucide-react";
 
 import CustomButton from "@/components/ui/custom-button";
 import Phone from "@/components/header/phone";
@@ -42,7 +43,7 @@ function LeftColumn() {
                 animate={{x:0,   opacity:1}}
                 transition={{duration:0.5, delay:0.6}}
             >
-              <Phone customClassName="min-[432px]:hidden flex"/>
+              <Phone customClassName="min-[438px]:hidden flex"/>
               <CustomButton title="Start for just ₹1" onClick={() =>customScrollTo("ContactForm")} />
 
              
@@ -52,17 +53,23 @@ function LeftColumn() {
             <div className="pt-12 flex gap-12 justify-center items-center lg:justify-start border-t border-white/10 mt-12 min-[359]:flex-row flex-col ">
               {
                   [
-                    {title:"5,000+", content:"Letter issued"},
-                    {title:"100%", content:"Approval Rate"},
-                    {title:"280+", content:"Courses"},
+                    {title:5000, suffix:"+", content:"Letter issued", duration:9},
+                    {title:100, suffix:"%", content:"Approval Rate", duration:5},
+                    {title:280, suffix:"+", content:"Courses", duration:7},
                   ].map((item, index) => (
-                    <motion.div  className="w-[80px] text-nowrap" key={index}
+                    <motion.div  className="w-[85px] text-nowrap" key={index}
                     initial={{y:40,  opacity:0}}
                     animate={{y:0,   opacity:1}}
                     transition={{duration:0.5, delay:0.9}}
                     >
                       <h3 className="text-2xl min-[432px]:text-3xl font-bold text-white border-b-4 border-red-600 pb-1 ">
-                        {item.title}
+                        <CountUp
+                          start={0}
+                          end={item.title}
+                          duration={item.duration}
+                          decimal=","
+                          delay={2}
+                        /> {item.suffix}
                       </h3>
                       <p className="min-[432px]:text-base text-zinc-300 mt-1 text-xs">
                         {item.content}
@@ -70,6 +77,7 @@ function LeftColumn() {
                     </motion.div>
                   ))
                 }
+                
             </div>
           </div>
   )

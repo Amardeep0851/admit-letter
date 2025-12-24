@@ -10,6 +10,7 @@ import HeroSection2 from "@/components/hero-section/hero-section2";
 import UniversitySection2 from "@/components/Universities/universities2";
 import RequirementsSection from "@/components/requirements/requirements";
 import TestimonialSection from "@/components/testimonial-section/testimonial-section";
+import RupeeCoin from "@/components/coin";
 
 function page() {
   return (
