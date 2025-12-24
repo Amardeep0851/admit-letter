@@ -110,7 +110,7 @@ const CoinFlipLetter = () => {
               className="absolute"
               style={{ transformStyle: 'preserve-3d' }}
             >
-              <div className="relative w-64 h-64 rounded-full shadow-2xl flex items-center justify-center border-yellow-300
+              <div className="relative xl:w-72 xlh-72 md:w-64 md:h-64 w-60 h-60 rounded-full shadow-2xl flex items-center justify-center border-yellow-300
               ">
                 <Image src="/images/coin.png"
               fill
