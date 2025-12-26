@@ -150,19 +150,18 @@ function HowThisWork() {
   };
 
   return (
-    <section className="bg-white my-20 px-4 xl:px-0 ">
+    <section className="bg-zinc-50 py-20 px-4 xl:px-0 ">
       <div className="max-w-7xl mx-auto  ">
-        <div className="flex justify-center items-center flex-col ">
-          <h2 
-          ref={addToRefs}
-          className="text-red-700 flex gap-2 items-center font-semibold">
+        <div className="flex justify-center items-center flex-col">
+          <h2 ref={addToRefs}
+          className="text-red-700 flex gap-2 items-center font-semibold ">
             <GraduationCap className="size-4 " />
             We help you get into your dream college.
           </h2>
           <h3 
           ref={() => {divElement.current}}
-          className="md:text-6xl font-bold pt-3 pb-8 text-5xl ">
-            How does it work?
+          className="text-4xl md:text-5xl lg:text-6xl font-bold pt-3 pb-8 ">
+            How does it <span className="text-red-700">work?</span>
           </h3>
         </div>
         <div className=" lg:grid lg:grid-cols-5  flex flex-col">

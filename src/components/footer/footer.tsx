@@ -1,13 +1,15 @@
 "use client"
 import React from "react";
-import { Earth, Handshake, ShieldCheckIcon } from "lucide-react";
+import { Earth, Facebook, Handshake, Instagram, MessageCircle, ShieldCheckIcon, Youtube } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { customScrollTo } from "@/lib/scroll-to";
 import FooterMotionDesign from "./footer-motion-design";
 import CustomButton, {  CustomButtonOutlineBlack } from "@/components/ui/custom-button";
+import SocialLinks from "./social-links";
 
 function Footer() {
+  
   const footerOptions = [
     {
       content: "100% Verified admit letters",
@@ -53,6 +55,7 @@ function Footer() {
               </div>
             ))}
           </div>
+          <SocialLinks />
           <div className="flex flex-col md:flex-row justify-between items-center gap-1 text-xs pt-4 px-4 absolute bottom-0 left-0 w-full border-0 text-zinc-300 p-0 md:pb-2 ">
               <p>© 2025 AdmitLetter. All rights reserved.</p>
               <div className="flex gap-6">Designed By Amardeep Singh</div>

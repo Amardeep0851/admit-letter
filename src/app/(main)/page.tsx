@@ -2,6 +2,7 @@ import React from "react";
 
 import FaqSection from "@/components/faq/faq";
 import Footer from "@/components/footer/footer";
+import Featured from "@/components/featured/featured";
 import CountriesSection3 from "@/components/countries/country3";
 import ContactForm from "@/components/contact-form/contact-form";
 import HowThisWork from "@/components/how-this-work/how-this-work";
@@ -10,34 +11,29 @@ import HeroSection2 from "@/components/hero-section/hero-section2";
 import UniversitySection2 from "@/components/Universities/universities2";
 import RequirementsSection from "@/components/requirements/requirements";
 import TestimonialSection from "@/components/testimonial-section/testimonial-section";
-import RupeeCoin from "@/components/coin";
-
+import Test from "@/components/test/test"
 function page() {
   return (
     <div className="font-sans">
-        <HeroSection2 />
-    <div className=" bg-white">
-      <UniversitySection2 />
-    </div>
+      <HeroSection2 />
+      <div className=" bg-white">
+        <UniversitySection2 />
+      </div>
+      <ContactForm />
 
-    <ContactForm />
-    <div className="bg-zinc-100 ">
-      <CountriesSection3 />
-    </div>
-    <div className="bg-zinc-50">
+      <div className="bg-zinc-100">
+        <CountriesSection3 />
+      </div>
+
       <HowThisWork />
-    </div>
-    <div>
       <TestimonialSection />
-    </div>
-    <div className="w-full ">
       <RequirementsSection />
+      <Featured />
+      <FaqSection />
+      <Footer />
+      <WhatsappButton />
+      {/* <Test /> */}
     </div>
-
-    <FaqSection />
-    <WhatsappButton /> 
-    <Footer />
-  </div>
   );
 }
 

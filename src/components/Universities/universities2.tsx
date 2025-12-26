@@ -177,10 +177,10 @@ const UniversitySection2 = () => {
     <section className="py-20 bg-white overflow-hidden relative">
       
       <div className="text-center mb-8 px-4">
-        <h2 className="text-3xl font-bold text-slate-900">
-          Trusted by Top Universities
+        <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-slate-900">
+          Trusted by Top <span className="text-red-700">Universities</span>
         </h2>
-        <p className="text-slate-500 mt-2">
+        <p className="text-slate-500 mt-2 text-lg">
           Our students have received admits from the world&apos;s most prestigious institutions.
         </p>
       </div>

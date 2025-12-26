@@ -114,8 +114,8 @@ const COUNTRIES = [
   return (
     <section className="max-w-7xl m-auto px-4 xl:px-0 py-20 font-sans">
       <header className="flex justify-center flex-col items-center space-y-4 pb-8">
-        <h2 className="text-4xl font-bold text-zinc-800 text-center ">Where do you want to study?</h2>
-        <p className="text-zinc-500 text-center">Choose your dream destination to see intake dates, estimated costs, and requirements.</p>
+        <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-zinc-800 text-center ">Where do you want to <span className="text-red-700">study?</span></h2>
+        <p className="text-zinc-500 text-center text-lg">Choose your dream destination to see intake dates, estimated costs, and requirements.</p>
       </header>
 
       <Tabs defaultValue={COUNTRIES[0].name} className="w-full ">

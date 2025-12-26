@@ -166,7 +166,7 @@ export default function FaqSection() {
   return (
     <section className="py-20 px-4 max-w-7xl mx-auto relative xl:px-0">
       <div className="space-y-4  flex flex-col justify-center items-center pb-12 ">
-          <h2 className="text-4xl font-bold text-gray-900 ">
+          <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-gray-900 ">
             Do you have <span className="text-red-700">questions</span>?
           </h2>
           <p className="text-gray-500 text-lg">

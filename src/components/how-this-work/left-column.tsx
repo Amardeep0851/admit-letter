@@ -33,7 +33,7 @@ function LeftColumn({currentImage, steps}:LeftColumnProps) {
           {/* <div className="absolute top-1/4 left-0 -translate-x-1/2 w-[200px] h-[300px] bg-red-700 rounded-r-full opacity-90 z-10 mix-blend-multiply"></div> */}
 
           {/* Woman Image */} 
-          <div className="md:w-[400px] aspect-square z-20 w-full overflow-hidden rounded-md lg:sticky top-24 ">
+          <div className="md:h-[550px] aspect-square z-20 w-full overflow-hidden rounded-md lg:sticky top-24 ">
             <AnimatePresence mode="wait">
               <motion.div className="relative w-full h-full "
               key={currentImage}
