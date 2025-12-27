@@ -63,9 +63,9 @@ const Featured = () => {
       gsap.fromTo(
         logo,
         {
-          opacity: 0.8,
+          opacity: 0.2,
           y: 60,
-          scale: 0.9,
+          scale: 0.7,
         },
         {
           opacity: 1,
@@ -76,12 +76,10 @@ const Featured = () => {
           ease: 'power3.out',
           scrollTrigger: {
             trigger: logo,
-            start: 'top 45%',
-            end: 'top 0%',
-            markers:true,
-            
-          scrub: true,
-
+            start: 'top 55%',
+            end: 'bottom 0%',
+            scrub: true,
+            // markers:true
             // toggleActions: 'play none none reverse',
           },
         }
