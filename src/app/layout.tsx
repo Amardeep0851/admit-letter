@@ -20,9 +20,11 @@ export const metadata: Metadata = {
   },
   description:
     "Get verified university offer letters from top global universities with expert guidance.",
-  robots: {
-    index: true,
-    follow: true,
+   robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    noimageindex: true,
   },
   icons: {
     icon: "/favicon.ico",
