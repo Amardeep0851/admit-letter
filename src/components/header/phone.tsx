@@ -27,7 +27,7 @@ export default function ContactPhone({customClassName}:{customClassName?:string}
         <PhoneCall className="size-5" />
       </motion.div>
       
-      <span>+91-9232322929</span>
+      <span>+91-8360828696</span>
     </div>
   );
 }

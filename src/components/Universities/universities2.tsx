@@ -4,23 +4,55 @@ import React from "react";
 import MarqueeRow from "./marquee-row";
 
 export const universities = [
-  {
-    name: "Harvard University",
-    alt: "Harvard University",
-    image: "/images/universities/harvard-university.jpg",
-    tier: "top",
-    country: "USA",
-    rounded:false,
-  },
-  {
-    name: "University of California, Berkeley",
-    alt: "University of California, Berkeley",
-    image: "/images/universities/university-of-california-berkeley.jpg",
-    tier: "top",
-    country: "USA",
-    rounded:false,
-  },
+  // {
+  //   name: "Harvard University",
+  //   alt: "Harvard University",
+  //   image: "/images/universities/harvard-university.jpg",
+  //   tier: "top",
+  //   country: "USA",
+  //   rounded:false,
+  // },
+  // {
+  //   name: "University of California, Berkeley",
+  //   alt: "University of California, Berkeley",
+  //   image: "/images/universities/university-of-california-berkeley.jpg",
+  //   tier: "top",
+  //   country: "USA",
+  //   rounded:false,
+  // },
+  // {
+  //   name: "University of Oxford",
+  //   alt: "University of Oxford",
+  //   image: "/images/universities/university-of-oxford.jpg",
+  //   tier: "top",
+  //   country: "UK",
+  //   rounded:false,
+  // },
+   // {
+  //   name: "Technical University of Munich (TUM)",
+  //   alt: "Technical University of Munich",
+  //   image: "/images/universities/technical-university-of-munich.jpg",
+  //   tier: "top",
+  //   country: "Germany",
+  //   rounded:false,
+  // },
   
+  // {
+  //   name: "University of Melbourne",
+  //   alt: "University of Melbourne",
+  //   image: "/images/universities/university-of-melbourne.jpg",
+  //   tier: "top",
+  //   country: "Australia",
+  //   rounded:false,
+  // },
+  // {
+  //   name: "University of Toronto",
+  //   alt: "University of Toronto",
+  //   image: "/images/universities/university-of-toronto.jpg",
+  //   tier: "top",
+  //   country: "Canada",
+  //   rounded:false,
+  // },  
   {
     name: "Northeastern University",
     alt: "Northeastern University",
@@ -37,14 +69,7 @@ export const universities = [
     country: "USA",
     rounded:false,
   },
-  {
-    name: "University of Oxford",
-    alt: "University of Oxford",
-    image: "/images/universities/university-of-oxford.jpg",
-    tier: "top",
-    country: "UK",
-    rounded:false,
-  },
+  
   {
     name: "University of Manchester",
     alt: "University of Manchester",
@@ -63,13 +88,39 @@ export const universities = [
   },
 
   {
-    name: "Technical University of Munich (TUM)",
-    alt: "Technical University of Munich",
-    image: "/images/universities/technical-university-of-munich.jpg",
-    tier: "top",
-    country: "Germany",
+    name: "Webster University",
+    alt: "Webster university",
+    image: "/images/universities/webster-university.jpg",
+    tier: "regular",
+    country: "USA",
     rounded:false,
   },
+  {
+    name: "New York Institute of Technology ",
+    alt: "New York Institute of Technology ",
+    image: "/images/universities/new-york.jpg",
+    tier: "regular",
+    country: "USA",
+    rounded:false,
+  },
+  
+  {
+    name: "University of Regina ",
+    alt: "University of Regina ",
+    image: "/images/universities/regina.jpg",
+    tier: "regular",
+    country: "USA",
+    rounded:false,
+  },
+  {
+    name: "University of Sunderland ",
+    alt: "University of Sunderland ",
+    image: "/images/universities/sunderland.jpg",
+    tier: "regular",
+    country: "USA",
+    rounded:false,
+  },
+ 
   {
     name: "RWTH Aachen University",
     alt: "RWTH Aachen University",
@@ -88,14 +139,6 @@ export const universities = [
   },
 
   {
-    name: "University of Melbourne",
-    alt: "University of Melbourne",
-    image: "/images/universities/university-of-melbourne.jpg",
-    tier: "top",
-    country: "Australia",
-    rounded:false,
-  },
-  {
     name: "University of Wollongong",
     alt: "University of Wollongong",
     image: "/images/universities/university-of-wollongong.jpg",
@@ -112,14 +155,7 @@ export const universities = [
     rounded:false,
   },
 
-  {
-    name: "University of Toronto",
-    alt: "University of Toronto",
-    image: "/images/universities/university-of-toronto.jpg",
-    tier: "top",
-    country: "Canada",
-    rounded:false,
-  },
+  
   {
     name: "McMaster University",
     alt: "McMaster University",
@@ -170,6 +206,14 @@ export const universities = [
     country: "UAE",
     rounded:false,
   },
+  {
+    name: "Algoma University",
+    alt: "Algoma university",
+    image: "/images/universities/algoma-university.jpg",
+    tier: "regular",
+    country: "Canada",
+    rounded:false,
+  },
 ];
 
 const UniversitySection2 = () => {
@@ -178,10 +222,10 @@ const UniversitySection2 = () => {
       
       <div className="text-center mb-8 px-4">
         <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-slate-900">
-          Trusted by Top <span className="text-red-700">Universities</span>
+          Admissions Across top <span className="text-red-700">Universities</span>
         </h2>
         <p className="text-slate-500 mt-2 text-lg">
-          Our students have received admits from the world&apos;s most prestigious institutions.
+          Our students have received admits from some of the world&apos;s most prestigious institutions.
         </p>
       </div>
       
@@ -191,7 +235,7 @@ const UniversitySection2 = () => {
       <div className="flex flex-col gap-0">
         <MarqueeRow items={universities.slice(0,9)} direction="left" speed={40} />
         
-        <MarqueeRow items={[...universities.slice(8)].reverse()} direction="right" speed={50} />
+        <MarqueeRow items={[...universities.slice(9)].reverse()} direction="right" speed={50} />
       </div>
 
     </section>

@@ -13,8 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Admit Letter",
-  description: "Admit Letter",
+  metadataBase: new URL("https://admit-letter.pages.dev"),
+  title: {
+    default: "Admit Letter | Verified University Offer Letters",
+    template: "%s | Admit Letter",
+  },
+  description:
+    "Get verified university offer letters from top global universities with expert guidance.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

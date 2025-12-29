@@ -63,7 +63,7 @@ const Featured = () => {
       gsap.fromTo(
         logo,
         {
-          opacity: 0.2,
+          opacity: 0.6,
           y: 60,
           scale: 0.7,
         },
@@ -115,7 +115,7 @@ const Featured = () => {
             <h2 
               className="flex gap-2 items-center font-semibold bg-red-100 text-red-600 px-4 py-1.5  rounded-md mb-4 shadow-sm/20">
             <Award className="w-4 h-4" />
-            <span className="text-sm font-semibold tracking-wide">Trusted By Thousands</span>
+            <span className="text-sm font-semibold tracking-wide">Media Presence & Mentions</span>
           </h2>
           </div>
           
@@ -124,7 +124,7 @@ const Featured = () => {
           </h2>
           
           <p className="text-lg  text-gray-600  mx-auto">
-            Recognized by leading media outlets for helping students achieve their study abroad dreams
+            Our announcements and content have appeared across various media and content platforms.
           </p>
         </motion.header>
 

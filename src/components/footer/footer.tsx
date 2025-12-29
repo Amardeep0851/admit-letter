@@ -7,6 +7,7 @@ import { customScrollTo } from "@/lib/scroll-to";
 import FooterMotionDesign from "./footer-motion-design";
 import CustomButton, {  CustomButtonOutlineBlack } from "@/components/ui/custom-button";
 import SocialLinks from "./social-links";
+import ExecutiveContactDialog from "../executive-dialog/executive-dialog";
 
 function Footer() {
   
@@ -40,8 +41,9 @@ function Footer() {
 
           {/* CTA */}
           <div className="flex flex-col md:flex-row gap-6 justify-center">
-            <CustomButton title="Talk to executive " onClick={() =>customScrollTo("ContactForm")} />
-            <CustomButtonOutlineBlack title="Start for just ₹1"  onClick={() =>customScrollTo("ContactForm")} />
+            
+            <CustomButton title="Start for just ₹1"  onClick={() =>customScrollTo("ContactForm")} />
+            <ExecutiveContactDialog /> 
           </div>
 
           {/* Trust badges */}
@@ -58,7 +60,6 @@ function Footer() {
           <SocialLinks />
           <div className="flex flex-col md:flex-row justify-between items-center gap-1 text-xs pt-4 px-4 absolute bottom-0 left-0 w-full border-0 text-zinc-300 p-0 md:pb-2 ">
               <p>© 2025 AdmitLetter. All rights reserved.</p>
-              <div className="flex gap-6">Designed By Amardeep Singh</div>
           </div>
         </div>
       

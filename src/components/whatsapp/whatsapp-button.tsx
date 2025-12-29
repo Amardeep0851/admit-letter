@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { handleWhatsappClick } from "./handle-whatsapp";
@@ -59,7 +59,7 @@ export default function WhatsappBubble() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="relative bg-red-700 text-white shadow-xl p-2 rounded-xl px-4 border border-red-800 "
+            className="relative bg-red-700 text-white shadow-xl p-2 rounded-xl px-4 border border-red-800  "
           >
             <p className="text-sm leading-snug">
               {messages[msgIndex]}
@@ -71,7 +71,7 @@ export default function WhatsappBubble() {
       {/* WhatsApp Button with WAVE Hover Animation */}
       <motion.button
         onClick={handleWhatsappClick}
-        className="bg-green-500 text-white rounded-full w-16 h-16 shadow-xl flex items-center justify-center cursor-pointer"
+        className=" text-white rounded-full w-16 h-16 flex items-center justify-center cursor-pointer relative "
         whileHover={{ 
           rotate: [0, -10, 10, -6, 6, 0],
           transition: { duration: 0.6 }
@@ -79,7 +79,12 @@ export default function WhatsappBubble() {
         whileTap={{ scale: 0.9 }}
         aria-label="Open WhatsApp"
       >
-        <MessageCircle className="w-8 h-8" />
+        <MessageCircle className="w-16 h-16 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  z-50 " />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sm bg-green-500 w-[56px] h-[56px] rounded-full " />
+        <div className="absolute bottom-2 left-2 bg-green-500 w-[16px] h-[16px]  " />
+        <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sm">
+        <Phone className="size-7" />
+        </span>
       </motion.button>
     </div>
   );

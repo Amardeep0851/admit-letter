@@ -19,18 +19,18 @@ export default function FloatingCard({slide, index}:slideProps) {
     <>
       <div className="relative w-[320px] h-[470px] min-[390px]:w-[370px] cursor-pointer group bg-white rounded-lg mx-auto shadow-2xl/10 shadow-red-700 border-b-4 border-red-700  transition-all duration-300 " >
         
-        <div className="absolute inset-0 rounded-xl p-6 shadow-2xl/30 shadow-red-700 flex flex-col justify-between overflow-hidden">
+        <div className="absolute inset-0 rounded-xl px-2 py-3 shadow-2xl/30 shadow-red-700 flex flex-col justify-between overflow-hidden">
         <div className="bg-red-700 size-40 absolute -left-12 -top-12 opacity-10 rounded-full blur-2xl z-[9999]" />
           
-          {/* Card Header */}
+          
           
 
           {/* Card Body - The Letter Content */}
           <div className="relative h-full w-full rounded-md  ">
             
-            <div className="bg-green-100 border border-green-300 text-green-700 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wide min-[390px]:flex justify-center items-center gap-1 hidden z-50 w-[100px] bottom-4 absolute right-0">
+            {/* <div className="bg-green-100  border-green-300 text-green-700 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wide min-[390px]:flex justify-center items-center gap-1 hidden z-50 w-[100px] bottom-4 absolute right-0 ">
               <CheckCircle2 className="size-2.5 -p-0.5" />Approved
-          </div>
+          </div> */}
               <Image 
                 src={slide.src} 
                 alt="" 
@@ -41,11 +41,11 @@ export default function FloatingCard({slide, index}:slideProps) {
                 priority={index === 0}
                />
 
-              <div className="bg-red-100 border-2 border-red-300 text-amber-700 size-16 rounded-full flex flex-col items-center justify-center shadow-lg absolute bottom-1/2 right-1/3 -rotate-[20deg] opacity-60"
+              {/* <div className="bg-red-100 border-2 border-red-300 text-amber-700 size-16 rounded-full flex flex-col items-center justify-center shadow-lg absolute bottom-1/2 right-1/3 -rotate-[20deg] opacity-60"
                   >
                     <Award className="size-5 mb-1" />
                     <span className="text-[9px] font-black uppercase text-center leading-none">Official<br/>Letter</span>
-                  </div>
+                  </div> */}
           </div>
 
 

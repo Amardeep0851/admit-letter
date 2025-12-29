@@ -26,20 +26,19 @@ function LeftTestimonial() {
         </h2>
 
         <p className="text-zinc-600 leading-relaxed mb-6 text-justify text-lg">
-          Every month, hundreds of students receive their admit letters through
-          our platform — fast, simple, and fully verified.
+          Every month, numerous students receive their admit letters through our platform — fast, simple, and fully verified.
         </p>
 
         {/* Stats Block */}
         <div className="flex items-center gap-6">
           <div className="h-16 w-[4px] bg-red-700" />
           <div className="flex flex-col text-zinc-500">
-          <span className="text-4xl font-bold text-zinc-900 ">100%</span>
-          Delivery Rate
+          <span className="text-4xl font-bold text-zinc-900 ">97%</span>
+          Application Success Rate
           </div> 
           <div className="h-16 w-[4px] bg-zinc-300" /> 
           <div className="flex flex-col text-zinc-500">
-          <span className="text-4xl font-bold text-zinc-900 ">5k+</span>
+          <span className="text-4xl font-bold text-zinc-900 ">500+</span>
           Happy Students
           </div> 
         </div>

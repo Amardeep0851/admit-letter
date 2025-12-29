@@ -4,9 +4,10 @@ import CountUp from 'react-countup';
 import {motion} from "framer-motion";
 import { CheckCircle } from "lucide-react";
 
-import CustomButton from "@/components/ui/custom-button";
+import CustomButton, { CustomButtonOutlineBlack } from "@/components/ui/custom-button";
 import Phone from "@/components/header/phone";
 import { customScrollTo } from "@/lib/scroll-to";
+import ExecutiveContactDialog from "../executive-dialog/executive-dialog";
 
 
 
@@ -19,13 +20,18 @@ function LeftColumn() {
             animate={{x:0, skewY:0,  opacity:1}}
             transition={{duration:0.5}}
             >
-              Get a verified offer letter for just ₹1
+              {/* Get your offer letter - start for just ₹1  */}
+              Start your offer letter process for just ₹1
+             {/*  Your Path to a University Offer Letter – Start for ₹1
+              
+              */}
             </motion.h1>
 
             <ul className="text-zinc-300 text-base lg:text-lg flex lg:justify-start flex-col items-center lg:items-start  ">
               {[
-                "Official, fully-formatted offer letter from top colleges.",
-                "No hidden charges for starting.",
+                "₹1 covers your Initial Profile Assessment & Course Shortlisting.",
+                "Application processing and university-specific services are subject to additional fees.",                
+                "No hidden charges for starting assessment.",
               ].map((item, index) => (
                 <motion.li className="flex gap-2 items-start mt-1" key={index}
                 initial={{x:-40, opacity:0}}
@@ -38,14 +44,16 @@ function LeftColumn() {
             </ul>
 
             {/* Buttons */}
-            <motion.div className="flex flex-wrap flex-col gap-6 items-center pt-2 justify-center lg:justify-start lg:items-start"
+            <motion.div className="flex flex-wrap flex-col md:flex-row gap-6 items-center pt-2 justify-center lg:justify-start lg:items-start"
                 initial={{x:-40, opacity:0}}
                 animate={{x:0,   opacity:1}}
                 transition={{duration:0.5, delay:0.6}}
             >
               <Phone customClassName="min-[438px]:hidden flex"/>
               <CustomButton title="Start for just ₹1" onClick={() =>customScrollTo("ContactForm")} />
-
+              <div className="min-[438px]:flex hidden">
+                <ExecutiveContactDialog />
+              </div>
              
             </motion.div>
 
@@ -53,9 +61,9 @@ function LeftColumn() {
             <div className="pt-12 flex gap-12 justify-center items-center lg:justify-start border-t border-white/10 mt-12 min-[359]:flex-row flex-col ">
               {
                   [
-                    {title:5000, suffix:"+", content:"Letter issued", duration:9},
-                    {title:100, suffix:"%", content:"Approval Rate", duration:5},
-                    {title:280, suffix:"+", content:"Courses", duration:7},
+                    {title:500, suffix:"+", content:"Letter issued", duration:9},
+                    {title:97, suffix:"%", content:"Approval Rate", duration:5},
+                    {title:132, suffix:"+", content:"Courses", duration:7},
                   ].map((item, index) => (
                     <motion.div  className="w-[85px] text-nowrap" key={index}
                     initial={{y:40,  opacity:0}}
