@@ -1,6 +1,7 @@
 import Header from "@/components/header/header";
 import React from 'react';
 import type { Metadata } from "next";
+import Watermark from "@/components/watermark/watermark";
 
 export const metadata: Metadata = {
   description:
@@ -27,6 +28,8 @@ export const metadata: Metadata = {
 function layout({children}:{children:React.ReactNode}) {
   return (
     <div>
+      <Watermark />
+
       <div className="bg-black">
         <Header />
       </div>

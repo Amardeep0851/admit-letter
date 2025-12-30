@@ -21,7 +21,7 @@ function LeftColumn() {
             transition={{duration:0.5}}
             >
               {/* Get your offer letter - start for just ₹1  */}
-              Start your offer letter process for just ₹1
+              Start your offer-letter assessment for ₹1
              {/*  Your Path to a University Offer Letter – Start for ₹1
               
               */}
@@ -30,7 +30,8 @@ function LeftColumn() {
             <ul className="text-zinc-300 text-base lg:text-lg flex lg:justify-start flex-col items-center lg:items-start  ">
               {[
                 "₹1 covers your Initial Profile Assessment & Course Shortlisting.",
-                "Application processing and university-specific services are subject to additional fees.",                
+                "Application processing and university-specific services are subject to additional fees.",     
+                // "Offer letters are issued solely by universities after application review.",           
                 "No hidden charges for starting assessment.",
               ].map((item, index) => (
                 <motion.li className="flex gap-2 items-start mt-1" key={index}

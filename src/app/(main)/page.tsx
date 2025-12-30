@@ -1,29 +1,68 @@
-// app/page.tsx
+import React from "react";
 
-export default function MaintenancePage() {
+import FaqSection from "@/components/faq/faq";
+import Footer from "@/components/footer/footer";
+import Featured from "@/components/featured/featured";
+import CountriesSection3 from "@/components/countries/country3";
+import ContactForm from "@/components/contact-form/contact-form";
+import HowThisWork from "@/components/how-this-work/how-this-work";
+import WhatsappButton from "@/components/whatsapp/whatsapp-button";
+import HeroSection2 from "@/components/hero-section/hero-section2";
+import UniversitySection2 from "@/components/Universities/universities2";
+import RequirementsSection from "@/components/requirements/requirements";
+import TestimonialSection from "@/components/testimonial-section/testimonial-section";
+import Script from "next/script";
+// import Test from "@/components/test/test"
+
+import type { Metadata } from "next";
+import Watermark from "@/components/watermark/watermark";
+
+export const metadata: Metadata = {
+  title: "Get Verified University Offer Letter for ₹1 | USA, UK, Canada",
+  description:
+    "Apply to top universities in USA, UK, Canada & Germany. Get a verified offer letter for just ₹1 with expert support.",
+};
+
+
+function page() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gradient-to-b from-neutral-900 to-black text-white px-6">
-      <section className="max-w-lg text-center">
-        {/* Icon */}
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-red-600/15 text-red-500 text-2xl">
-          ⚙️
-        </div>
+    
+    <div className="font-sans">
+      <Script
+        id="edu-org-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+      >
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          name: "Admit Letter",
+          url: "https://admit-letter.pages.dev",
+          description:
+            "Verified university offer letters with expert admission guidance.",
+          areaServed: ["IN", "US", "UK", "CA", "DE"],
+        })}
+      </Script>
+      <HeroSection2 />
+      <div className=" bg-white">
+        <UniversitySection2 />
+      </div>
+      <ContactForm />
 
-        {/* Heading */}
-        <h1 className="text-2xl font-semibold mb-3">
-          Website Under Maintenance
-        </h1>
+      <div className="bg-zinc-100">
+        <CountriesSection3 />
+      </div>
 
-        {/* Divider */}
-        <div className="mx-auto mb-6 h-0.5 w-14 bg-red-600/70" />
-
-        {/* Copy */}
-        <p className="text-sm leading-relaxed text-gray-300">
-          We’re currently performing maintenance and internal updates.
-          <br />
-          The website will be available once this process is complete.
-        </p>
-      </section>
-    </main>
+      <HowThisWork />
+      <TestimonialSection />
+      <RequirementsSection />
+      <Featured />
+      <FaqSection />
+      <Footer />
+      <WhatsappButton />
+      {/* <Test /> */}
+    </div>
   );
 }
+
+export default page;
