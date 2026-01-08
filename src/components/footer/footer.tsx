@@ -42,7 +42,7 @@ function Footer() {
           {/* CTA */}
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             
-            <CustomButton title="Start for just ₹1"  onClick={() =>customScrollTo("ContactForm")} />
+            <CustomButton title="Start for just ₹999"  onClick={() =>customScrollTo("ContactForm")} />
             <ExecutiveContactDialog /> 
           </div>
 

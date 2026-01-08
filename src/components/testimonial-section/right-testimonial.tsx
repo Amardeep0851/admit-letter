@@ -165,12 +165,12 @@ const RightTestimonial = () => {
               totalSlides === 2 ? "w-[calc(50%-0.5rem)]" : "w-full"
             }`}
           >
-            <Slider TESTIMONIALS={TESTIMONIALS} currentIndex={currentIndex} />
+            <Slider testimonial={TESTIMONIALS} currentIndex={currentIndex} />
           </div>
           {totalSlides === 2 && (
             <div className="flex-shrink-0 w-[calc(50%-0.5rem)]">
               <Slider
-                TESTIMONIALS={TESTIMONIALS}
+                testimonial={TESTIMONIALS}
                 currentIndex={(currentIndex + 1) % TESTIMONIALS.length}
               />
             </div>

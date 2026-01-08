@@ -32,7 +32,7 @@ function RightTab({country}:RightTabProps) {
         ))
         }
       </ul>
-      <CustomButton title="Start for just ₹1" onClick={() =>customScrollTo("ContactForm")} />
+      <CustomButton title="Start for just ₹999" onClick={() =>customScrollTo("ContactForm")} />
       <div className="text-sm text-left pt-2 text-zinc-500">
         Offer valid for first consultation.
       </div>

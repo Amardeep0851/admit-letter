@@ -18,7 +18,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import CustomButton, { CustomButtonOutlineBlack } from "@/components/ui/custom-button";
+import { CustomButtonOutlineBlack } from "@/components/ui/custom-button";
 import { cn } from "@/lib/utils";
 
 const ExecutiveContactDialog = () => {

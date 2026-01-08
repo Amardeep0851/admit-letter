@@ -4,6 +4,7 @@ import { MessageCircle, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { handleWhatsappClick } from "./handle-whatsapp";
+import Image from "next/image";
 
 export default function WhatsappBubble() {
   const messages = [
@@ -71,7 +72,7 @@ export default function WhatsappBubble() {
       {/* WhatsApp Button with WAVE Hover Animation */}
       <motion.button
         onClick={handleWhatsappClick}
-        className=" text-white rounded-full w-16 h-16 flex items-center justify-center cursor-pointer relative "
+        className=" text-white rounded-full w-[56px] h-[56px] flex items-center justify-center cursor-pointer relative "
         whileHover={{ 
           rotate: [0, -10, 10, -6, 6, 0],
           transition: { duration: 0.6 }
@@ -79,12 +80,7 @@ export default function WhatsappBubble() {
         whileTap={{ scale: 0.9 }}
         aria-label="Open WhatsApp"
       >
-        <MessageCircle className="w-16 h-16 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  z-50 " />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sm bg-green-500 w-[56px] h-[56px] rounded-full " />
-        <div className="absolute bottom-2 left-2 bg-green-500 w-[16px] h-[16px]  " />
-        <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sm">
-        <Phone className="size-7" />
-        </span>
+      <Image src="/images/whatsapp-icon.png" fill alt="Whatsapp Button" />
       </motion.button>
     </div>
   );

@@ -15,7 +15,8 @@ import Script from "next/script";
 // import Test from "@/components/test/test"
 
 import type { Metadata } from "next";
-import Watermark from "@/components/watermark/watermark";
+import UniversitySection from "@/components/Universities/universities";
+import Featured3 from "@/components/featured/featured3";
 
 export const metadata: Metadata = {
   title: "Get Verified University Offer Letter for ₹1 | USA, UK, Canada",
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
 
 
 function page() {
+  
   return (
     
     <div className="font-sans">
@@ -46,6 +48,7 @@ function page() {
       <HeroSection2 />
       <div className=" bg-white">
         <UniversitySection2 />
+        <UniversitySection />
       </div>
       <ContactForm />
 
@@ -57,6 +60,7 @@ function page() {
       <TestimonialSection />
       <RequirementsSection />
       <Featured />
+      <Featured3 />
       <FaqSection />
       <Footer />
       <WhatsappButton />

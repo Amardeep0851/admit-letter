@@ -28,9 +28,9 @@ function HowThisWork() {
     () => [
       {
         step: 1,
-        title: "Start for ₹1",
+        title: "Start for ₹999",
         content:
-          "Create your profile for a ₹1 introductory token fee. Receive a quick eligibility check and professional clarity on your options.",
+          "Create your profile for a ₹999 introductory token fee. Receive a quick eligibility check and professional clarity on your options.",
         icon: FileText,
         image: "/images/howthiswork/1.jpg",
       },
@@ -70,7 +70,7 @@ function HowThisWork() {
     {
       icon: ShieldCheck,
       content:
-        "₹1 fee is for profile assessment, consulting, and university shortlisting only. University & service fees apply for later stages",
+        "₹999 fee is for profile assessment, consulting, and university shortlisting only. University & service fees apply for later stages",
     },
   ];
   useEffect(() => {

@@ -21,7 +21,10 @@ function LeftColumn() {
             transition={{duration:0.5}}
             >
               {/* Get your offer letter - start for just ₹1  */}
-              Start your offer-letter assessment for ₹1
+              {/* Start your offer-letter assessment for just ₹1 */}
+              {/* From Profile Assessment to Offer Letters — Get Started for ₹1 */}
+              Start your offer-letter assessment for ₹999
+              {/* Start your offer letter process for just ₹1 */}
              {/*  Your Path to a University Offer Letter – Start for ₹1
               
               */}
@@ -29,7 +32,7 @@ function LeftColumn() {
 
             <ul className="text-zinc-300 text-base lg:text-lg flex lg:justify-start flex-col items-center lg:items-start  ">
               {[
-                "₹1 covers your Initial Profile Assessment & Course Shortlisting.",
+                "₹999 covers your Initial Profile Assessment & Course Shortlisting.",
                 "Application processing and university-specific services are subject to additional fees.",     
                 // "Offer letters are issued solely by universities after application review.",           
                 "No hidden charges for starting assessment.",
@@ -51,7 +54,7 @@ function LeftColumn() {
                 transition={{duration:0.5, delay:0.6}}
             >
               <Phone customClassName="min-[438px]:hidden flex"/>
-              <CustomButton title="Start for just ₹1" onClick={() =>customScrollTo("ContactForm")} />
+              <CustomButton title="Start for just ₹999" onClick={() =>customScrollTo("ContactForm")} />
               <div className="min-[438px]:flex hidden">
                 <ExecutiveContactDialog />
               </div>

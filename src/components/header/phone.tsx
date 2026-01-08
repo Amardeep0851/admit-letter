@@ -3,8 +3,9 @@
 import React from "react";
 import { PhoneCall } from "lucide-react"; // Assuming you use lucide-react
 import { motion } from "framer-motion";
+import {phoneNumber } from "@/lib/constant"
 import { cn } from "@/lib/utils";
-import { handleWhatsappClick } from "../whatsapp/handle-whatsapp";
+import { handleWhatsappClick } from "@/components/whatsapp/handle-whatsapp";
 
 export default function ContactPhone({customClassName}:{customClassName?:string}) {
   
@@ -27,7 +28,7 @@ export default function ContactPhone({customClassName}:{customClassName?:string}
         <PhoneCall className="size-5" />
       </motion.div>
       
-      <span>+91-8360828696</span>
+      <span>{phoneNumber}</span>
     </div>
   );
 }

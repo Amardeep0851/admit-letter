@@ -1,10 +1,10 @@
 import React from "react";
 import { AnimatePresence, easeInOut, motion } from "framer-motion";
 import Image from "next/image";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Star } from "lucide-react";
 
 type SliderProps = {
-  TESTIMONIALS: {
+  testimonial: {
     id: number;
     name: string;
     role: string;
@@ -15,9 +15,9 @@ type SliderProps = {
   currentIndex: number;
 };
 
-function Slider({ TESTIMONIALS, currentIndex }: SliderProps) {
+function Slider({ testimonial, currentIndex }: SliderProps) {
   return (
-    <div className="overflow-hidden justify-between w-full bg-white rounded-md  shadow-lg min-h-[400px] flex flex-col md:flex-row border border-zinc-200 h-full ">
+    <div className="overflow-hidden w-full bg-white rounded-md  p-6 px-8 shadow-lg min-h-[370px] border border-zinc-100 h-full ">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
@@ -25,46 +25,71 @@ function Slider({ TESTIMONIALS, currentIndex }: SliderProps) {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0.2, x: -50 }}
           transition={{ duration: 0.3, ease: easeInOut }}
-          className="flex flex-col w-full h-full"
+          className="w-full h-full"
         >
-          {/* Image Side */}
-          <div className="flex justify-center relative bg-zinc-100 ">
-            <div className="absolute w-full h-full bg-linear-to-b from-60% from-transparent to-black  opacity-90 z-10" />
-            <div className=" z-50 absolute top-2 left-4 p-0.5 px-3 rounded-full opacity-70 backdrop-blur-3xl flex gap-2 bg-white text-sm items-center justify-center">
-                <CheckCircle className="size-3 text-green-700" /> Success Stories
+          <figure className="group relative h-full w-full transition-all duration-300 hover:-translate-y-1 flex flex-col">
+            {/* 1. HEADER: Profile Info */}
+            <div className="flex items-center  gap-4 mb-6">
+              <div className="relative size-14 overflow-hidden rounded-full border-2 border-white shadow-sm">
+                <Image
+                  src={testimonial[currentIndex].image}
+                  alt={testimonial[currentIndex].name}
+                  fill
+                  className="object-cover"
+                />
               </div>
-              
-
-              <div className="flex  flex-col z-20 absolute bottom-2 right-4 p-1 px-3 bg-zinc-950/20 backdrop-blur-sm rounded-md">
-                <h4 className="text-lg font-bold text-white  ">
-                  {TESTIMONIALS[currentIndex].name}
-                </h4>
-                {/* <p className="text-zinc-100  text-sm text-right ">
-                  {TESTIMONIALS[currentIndex].role}
-                </p> */}
+              <div>
+                <figcaption className="text-lg font-bold text-slate-900 leading-tight">
+                  {testimonial[currentIndex].name}
+                </figcaption>
+                <p className="text-sm font-medium text-slate-500">
+                  {/* Matching the reference style: Origin → Destination */}
+                  India <span className="mx-1 text-slate-300">→</span>{" "}
+                  {testimonial[currentIndex].role}
+                </p>
               </div>
-            <div className=" relative w-[300px] h-[350px] md:h-[350px] rounded-md">
-              
-              <Image
-                src={TESTIMONIALS[currentIndex].image}
-                alt={TESTIMONIALS[currentIndex].name}
-                fill
-                loading="lazy"
-                placeholder="blur"
-                blurDataURL="/images/blur.jpg"
-                className="object-cover object-top z-10 absolute "
-              />
-              
             </div>
-          </div>
-          {/* Content Side */}
-          <div className="w-full  p-4 lg:px-8 py-4 flex flex-col justify-center ">
-            <blockquote className="text-gray-600 leading-relaxed mb-8 text-lg text-justify font-medium">
-              &quot;{TESTIMONIALS[currentIndex].text}&quot;
+
+            {/* <div className="flex gap-0.5 mb-4">
+        {[...Array(5)].map((_, i) => (
+          <Star
+            key={i}
+            size={16}
+            className={i < testimonial[currentIndex].rating ? "fill-amber-400 text-amber-400" : "text-slate-200"}
+          />
+        ))}
+      </div> */}
+
+            {/* 3. BODY: testimonial Text */}
+            <div className="grow pb-8">
+              <blockquote className="text-[15px] leading-relaxed text-slate-700 font-medium mb-8 text-justify">
+              &quot;{testimonial[currentIndex].text}&quot;
             </blockquote>
 
-            {/* Author Info */}
-          </div>
+            </div>
+            {/* 4. FOOTER: Tags & University Branding */}
+            <div className="flex items-center justify-between mt-auto pt-4 absolute bottom-0 right-0 left-0">
+
+              {/* University Logo Branding (Right Aligned per reference) */}
+              <div className="flex items-center gap-2 opacity-80  transition-all">
+                <div className="size-8 bg-red-600 rounded-sm flex items-center justify-center font-serif font-bold text-white">
+                  {testimonial[currentIndex].role.charAt(0)}
+                </div>
+                <div className="text-left">
+                  <p className="text-[10px] font-black uppercase text-zinc-900 leading-none">
+                    Accepted at
+                  </p>
+                  <p className="text-sm font-bold text-zinc-600 tracking-tighter">
+                    {testimonial[currentIndex].role}
+                  </p>
+                </div>
+                {/* Placeholder for University Crest/Icon */}
+              </div>
+              <span className="px-1.5 py-1.5 bg-emerald-100 rounded-full text-xs font-bold uppercase tracking-wide">
+                <CheckCircle className="size-4 text-emerald-600" />
+              </span>
+            </div>
+          </figure>
         </motion.div>
       </AnimatePresence>
     </div>

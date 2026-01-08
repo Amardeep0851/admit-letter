@@ -2,6 +2,8 @@
 
 import React from "react";
 import MarqueeRow from "./marquee-row";
+import MarqueeRow2 from "./marquee-row2";
+import { GraduationCap } from "lucide-react";
 
 export const universities = [
   // {
@@ -60,6 +62,9 @@ export const universities = [
     tier: "mid",
     country: "USA",
     rounded:false,
+    icon:GraduationCap,
+    color:"green",
+    firstLetter:"N"
   },
   {
     name: "Arizona State University",
@@ -68,6 +73,9 @@ export const universities = [
     tier: "mid",
     country: "USA",
     rounded:false,
+    icon:GraduationCap,
+    color:"blue",
+    firstLetter:"A"
   },
   
   {
@@ -77,6 +85,9 @@ export const universities = [
     tier: "mid",
     country: "UK",
     rounded:false,
+    icon:GraduationCap,
+    color:"red",
+    firstLetter:"M"
   },
   {
     name: "University of Leicester",
@@ -85,6 +96,9 @@ export const universities = [
     tier: "regular",
     country: "UK",
     rounded:false,
+    icon:GraduationCap,
+    color:"purple",
+    firstLetter:"L"
   },
 
   {
@@ -94,6 +108,9 @@ export const universities = [
     tier: "regular",
     country: "USA",
     rounded:false,
+    icon:GraduationCap,
+    color:"emerald",
+    firstLetter:"W"
   },
   {
     name: "New York Institute of Technology ",
@@ -102,6 +119,9 @@ export const universities = [
     tier: "regular",
     country: "USA",
     rounded:false,
+    icon:GraduationCap,
+    color:"amber",
+    firstLetter:"N"
   },
   
   {
@@ -111,6 +131,9 @@ export const universities = [
     tier: "regular",
     country: "USA",
     rounded:false,
+    icon:GraduationCap,
+    color:"fuchsia",
+    firstLetter:"R"
   },
   {
     name: "University of Sunderland ",
@@ -119,6 +142,9 @@ export const universities = [
     tier: "regular",
     country: "USA",
     rounded:false,
+    icon:GraduationCap,
+    color:"lime",
+    firstLetter:"S"
   },
  
   {
@@ -128,6 +154,9 @@ export const universities = [
     tier: "mid",
     country: "Germany",
     rounded:false,
+    icon:GraduationCap,
+    color:"orange",
+    firstLetter:"R"
   },
   {
     name: "University of Duisburg-Essen",
@@ -136,6 +165,9 @@ export const universities = [
     tier: "regular",
     country: "Germany",
     rounded:true,
+    icon:GraduationCap,
+    color:"yellow",
+    firstLetter:"D"
   },
 
   {
@@ -145,6 +177,9 @@ export const universities = [
     tier: "mid",
     country: "Australia",
     rounded:false,
+    icon:GraduationCap,
+    color:"teal",
+    firstLetter:"W"
   },
   {
     name: "Deakin University",
@@ -153,6 +188,9 @@ export const universities = [
     tier: "regular",
     country: "Australia",
     rounded:false,
+    icon:GraduationCap,
+    color:"violet",
+    firstLetter:"D"
   },
 
   
@@ -163,6 +201,9 @@ export const universities = [
     tier: "mid",
     country: "Canada",
     rounded:false,
+    icon:GraduationCap,
+    color:"green",
+    firstLetter:"M"
   },
   {
     name: "Memorial University of Newfoundland",
@@ -171,6 +212,9 @@ export const universities = [
     tier: "regular",
     country: "Canada",
     rounded:false,
+    icon:GraduationCap,
+    color:"fuchsia",
+    firstLetter:"M"
   },
 
   {
@@ -180,6 +224,9 @@ export const universities = [
     tier: "top",
     country: "New Zealand",
     rounded:true,
+    icon:GraduationCap,
+    color:"purple",
+    firstLetter:"A"
   },
   {
     name: "Victoria University of Wellington",
@@ -188,6 +235,9 @@ export const universities = [
     tier: "mid",
     country: "New Zealand",
     rounded:false,
+    icon:GraduationCap,
+    color:"emerald",
+    firstLetter:"V"
   },
 
   {
@@ -197,6 +247,9 @@ export const universities = [
     tier: "mid",
     country: "UAE",
     rounded:false,
+    icon:GraduationCap,
+    color:"blue",
+    firstLetter:"D"
   },
   {
     name: "American University in Dubai (AUD)",
@@ -205,6 +258,9 @@ export const universities = [
     tier: "regular",
     country: "UAE",
     rounded:false,
+    icon:GraduationCap,
+    color:"amber",
+    firstLetter:"A"
   },
   {
     name: "Algoma University",
@@ -213,6 +269,9 @@ export const universities = [
     tier: "regular",
     country: "Canada",
     rounded:false,
+    icon:GraduationCap,
+    color:"lime",
+    firstLetter:"A"
   },
 ];
 
@@ -233,9 +292,9 @@ const UniversitySection2 = () => {
       <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
 
       <div className="flex flex-col gap-0">
-        <MarqueeRow items={universities.slice(0,9)} direction="left" speed={40} />
+        <MarqueeRow2 items={universities.slice(0,9)} direction="left" speed={40} />
         
-        <MarqueeRow items={[...universities.slice(9)].reverse()} direction="right" speed={50} />
+        <MarqueeRow2 items={[...universities.slice(9)].reverse()} direction="right" speed={50} />
       </div>
 
     </section>
